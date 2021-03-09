@@ -1,16 +1,15 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Src/Game Objects/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Src/Game Objects/Portal.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Src/Game Objects/Base_Object.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Src/UI/UI.tscn" type="PackedScene" id=4]
 
 [node name="Level_Base" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 24.3676, 19.6001 )
+position = Vector2( 28.1516, 90.6559 )
 
 [node name="Object" parent="." instance=ExtResource( 3 )]
 position = Vector2( 157.033, 24.0259 )
 
-[node name="Portal" parent="." instance=ExtResource( 2 )]
-position = Vector2( 65.762, 112.335 )
+[node name="UI" parent="." instance=ExtResource( 4 )]
