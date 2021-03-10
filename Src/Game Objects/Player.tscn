@@ -1,13 +1,212 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Src/Code/Player.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Player.png" type="Texture" id=2]
+[ext_resource path="res://Assets/YouPlayer.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-height = 9.63523
+radius = 5.1572
+height = 24.5882
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 18.7785
+radius = 19.9308
+
+[sub_resource type="Animation" id=3]
+resource_name = "IdleDown"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "IdleLeft"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 9 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "IdleRight"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "IdleUp"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "WalkDown"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 12, 13, 14, 15 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "WalkLeft"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 8, 9, 10, 11 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "WalkRight"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "WalkUp"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6, 7 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=11]
+animation = "IdleLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=12]
+animation = "IdleDown"
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "IdleRight"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "IdleUp"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=15]
+blend_point_0/node = SubResource( 11 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 12 )
+blend_point_1/pos = Vector2( 0, 1 )
+blend_point_2/node = SubResource( 13 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 14 )
+blend_point_3/pos = Vector2( 0, -1.1 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "WalkLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=17]
+animation = "WalkDown"
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "WalkRight"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "WalkUp"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=20]
+blend_point_0/node = SubResource( 16 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 17 )
+blend_point_1/pos = Vector2( 0, 1 )
+blend_point_2/node = SubResource( 18 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 19 )
+blend_point_3/pos = Vector2( 0, -1.1 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+
+[sub_resource type="AnimationNodeStateMachine" id=23]
+states/Idle/node = SubResource( 15 )
+states/Idle/position = Vector2( 177.5, 74.5 )
+states/Walk/node = SubResource( 20 )
+states/Walk/position = Vector2( 400, 76.25 )
+transitions = [ "Idle", "Walk", SubResource( 21 ), "Walk", "Idle", SubResource( 22 ) ]
+start_node = "Idle"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=24]
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -21,7 +220,28 @@ shape = SubResource( 1 )
 shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, 0.294 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
-hframes = 60
+hframes = 16
+frame = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/IdleDown = SubResource( 3 )
+anims/IdleLeft = SubResource( 4 )
+anims/IdleRight = SubResource( 5 )
+anims/IdleUp = SubResource( 6 )
+anims/WalkDown = SubResource( 7 )
+anims/WalkLeft = SubResource( 8 )
+anims/WalkRight = SubResource( 9 )
+anims/WalkUp = SubResource( 10 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 23 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 24 )
+parameters/Idle/blend_position = Vector2( -0.000936329, -0.00472105 )
+parameters/Walk/blend_position = Vector2( -0.000936329, 0 )
 [connection signal="body_entered" from="Detection" to="." method="_on_Detection"]
 [connection signal="body_exited" from="Detection" to="." method="_off_Detection"]
