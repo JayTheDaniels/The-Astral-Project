@@ -19,6 +19,10 @@ config/name="The Astral Project"
 run/main_scene="res://Src/Levels/Level_Base.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Game="*res://Src/Code/Game.gd"
+
 [display]
 
 window/size/width=341

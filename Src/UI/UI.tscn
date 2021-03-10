@@ -1,12 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Src/Code/PortalButton.gd" type="Script" id=1]
 [ext_resource path="res://Src/Code/InvisibleButton.gd" type="Script" id=2]
 [ext_resource path="res://Src/Code/SpeedButton.gd" type="Script" id=3]
+[ext_resource path="res://Src/Code/UI.gd" type="Script" id=4]
+[ext_resource path="res://Src/UI/PopupDialog.tscn" type="PackedScene" id=5]
 
 [node name="UI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -16,10 +19,11 @@ __meta__ = {
 "_editor_description_": "Just keeps everything in place"
 }
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="Lives" type="Label" parent="CanvasLayer"]
+visible = false
 margin_right = 112.0
 margin_bottom = 14.0
-text = "Lives Placeholder"
+text = "Lives Placeholder: %s"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -58,6 +62,8 @@ margin_right = 175.0
 margin_bottom = 20.0
 text = "SPEED"
 script = ExtResource( 3 )
+
+[node name="PopupDialog" parent="CanvasLayer" instance=ExtResource( 5 )]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/PortalButton" to="CanvasLayer/HBoxContainer/PortalButton" method="_on_Button_pressed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/InvisibleButton" to="CanvasLayer/HBoxContainer/InvisibleButton" method="_on_InvisibleButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/SpeedButton" to="CanvasLayer/HBoxContainer/SpeedButton" method="_on_SpeedButton_pressed"]

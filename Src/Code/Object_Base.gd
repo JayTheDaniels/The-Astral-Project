@@ -6,3 +6,4 @@ extends StaticBody2D
 
 func interaction():
 	print("Is interacting with " + self.name)
+	
