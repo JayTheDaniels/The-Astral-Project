@@ -56,6 +56,8 @@ func _on_Detection(body: Node) -> void:
 	if body == self:
 		#print ("interacting with self, ignored")
 		return
+	if body == get_parent().get_node("Room"):
+		return
 	can_interact = true
 	curr_target = body
 	print("can interact with " + curr_target.name)

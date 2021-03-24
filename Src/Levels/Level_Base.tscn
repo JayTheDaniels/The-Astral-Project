@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Src/Game Objects/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/bedroom3_realworld.png" type="Texture" id=2]
+[ext_resource path="res://Src/Code/Object_Base.gd" type="Script" id=3]
+[ext_resource path="res://Src/UI/UI.tscn" type="PackedScene" id=4]
+
+[node name="Level_Base" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -32.0
+margin_top = -16.0
+margin_right = 1504.0
+margin_bottom = 1392.0
+rect_scale = Vector2( 0.16, 0.16 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 29.4512, 114.691 )
+
+[node name="UI" parent="." instance=ExtResource( 4 )]
+
+[node name="Room" type="StaticBody2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room"]
+polygon = PoolVector2Array( 8, 168, 136, 168, 136, 152, 152, 152, 152.337, 168, 176, 168, 176, 40, 104, 40, 104, 56, 72, 64, 72, 40, 40, 40, 40, 64, 24, 64, 24, 40, 8, 40, 0, -16, 216, -16, 216, 208, -32, 208, -32, -16, 0, -16, 0, -16, 8, 40 )
+
+[node name="Furniture" type="StaticBody2D" parent="."]
+position = Vector2( 104, 160 )
+script = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture"]
+polygon = PoolVector2Array( 0, -32, -16, -32, -16, -40, 8, -40, 8, -64, 24, -64, 24, -48, 0, -40 )
