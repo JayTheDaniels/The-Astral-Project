@@ -20,6 +20,7 @@ onready var animationState = animationTree.get("parameters/playback")
 func _ready():
 	pass
 #	animationTree.active = true
+	self.global_position = Global.player_initial_map_position
 
 func _physics_process(delta):
 		move_state(delta)

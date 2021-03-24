@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/bedroom3_realworld.png" type="Texture" id=1]
+[ext_resource path="res://Src/Game Objects/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Src/UI/UI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Src/Levels/Door.tscn" type="PackedScene" id=4]
+
+[node name="Level_Base" type="Node2D"]
+
+[node name="BedroomObjectCollision" type="StaticBody2D" parent="."]
+position = Vector2( 104, 160 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BedroomObjectCollision"]
+polygon = PoolVector2Array( 0, -32, -16, -32, -16, -40, 8, -40, 8, -64, 24, -64, 24, -48, 0, -40 )
+
+[node name="BedroomBackground" type="TextureRect" parent="."]
+margin_left = -32.0
+margin_top = -16.0
+margin_right = 1504.0
+margin_bottom = 1392.0
+rect_scale = Vector2( 0.16, 0.16 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 160, 112 )
+
+[node name="UI" parent="." instance=ExtResource( 3 )]
+margin_left = 1.0
+margin_right = 1.0
+
+[node name="Door2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 208, 112 )
+next_scene_path = "res://Src/Levels/Bathroom.tscn"
+player_spawn_location = Vector2( 56, 144 )
+
+[node name="BedroomWallCollision" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BedroomWallCollision"]
+polygon = PoolVector2Array( 8, 168, 32, 168, 32, 200, 64, 200, 64, 168, 136, 168, 136, 152, 152, 152, 152.337, 168, 176, 168, 176, 136, 200, 136, 200, 88, 176, 88, 176, 40, 104, 40, 104, 56, 72, 64, 72, 40, 40, 40, 40, 64, 24, 64, 24, 40, 8, 40, 0, -16, 216, -16, 216, 208, -32, 208, -32, -16, 0, -16, 0, -16, 8, 40 )
+
+[node name="Door" parent="." instance=ExtResource( 4 )]
+position = Vector2( 48, 200 )
+next_scene_path = "res://Src/Levels/Hallway.tscn"
+player_spawn_location = Vector2( 248, 96 )
