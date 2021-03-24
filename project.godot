@@ -22,7 +22,6 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://Src/Code/Global.gd"
-Game="*res://Src/Code/Game.gd"
 
 [display]
 
