@@ -29,15 +29,17 @@ position = Vector2( 160.094, 54.9846 )
 
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
-[node name="AstralLevelBedroomBoundary" type="StaticBody2D" parent="."]
+[node name="AstralLevelBedroomBoundary" type="StaticBody2D" parent="." groups=[
+"Walls",
+]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AstralLevelBedroomBoundary"]
 polygon = PoolVector2Array( 8, 32, 8, 168, 133.764, 168, 136, 152, 152, 152, 152, 168, 176, 168, 176, 48, 176, 48, 176, 32, 176, -16, 216, -16, 216, 216, -40, 216, -40, -16, 176, -16, 176, 32, 40, 32, 40, 64, 24, 64, 24, 32 )
-disabled = true
 
-[node name="AstralLevelObjectBoundary" type="StaticBody2D" parent="."]
+[node name="AstralLevelObjectBoundary" type="StaticBody2D" parent="." groups=[
+"Walls",
+]]
 position = Vector2( 104, 120 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AstralLevelObjectBoundary"]
 polygon = PoolVector2Array( -16, 0, -16, 8, 0, 8, 8, 0, 24, -8, 24, -24, 8, -24, 8, 0 )
-disabled = true
