@@ -36,7 +36,9 @@ position = Vector2( 208, 112 )
 next_scene_path = "res://Src/Levels/Bathroom.tscn"
 player_spawn_location = Vector2( 56, 144 )
 
-[node name="BedroomWallCollision" type="StaticBody2D" parent="."]
+[node name="BedroomWallCollision" type="StaticBody2D" parent="." groups=[
+"Walls",
+]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BedroomWallCollision"]
 polygon = PoolVector2Array( 8, 168, 32, 168, 32, 200, 64, 200, 64, 168, 136, 168, 136, 152, 152, 152, 152.337, 168, 176, 168, 176, 136, 200, 136, 200, 88, 176, 88, 176, 40, 104, 40, 104, 56, 72, 64, 72, 40, 40, 40, 40, 64, 24, 64, 24, 40, 8, 40, 0, -16, 216, -16, 216, 208, -32, 208, -32, -16, 0, -16, 0, -16, 8, 40 )

@@ -25,7 +25,9 @@ position = Vector2( 56, 144 )
 margin_left = 1.0
 margin_right = 1.0
 
-[node name="BathroomCollision" type="StaticBody2D" parent="."]
+[node name="BathroomCollision" type="StaticBody2D" parent="." groups=[
+"Walls",
+]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BathroomCollision"]
 polygon = PoolVector2Array( 8, 32, 8, 32, 32, 32, 32, 48, 48, 48, 48, 32, 72, 32, 72, 48, 112, 48, 112, 80, 160, 80, 160, 112, 192, 112, 192, 168, 8, 168, 8, 120, 72, 120, 72, 96, 8, 96, 8, 32, -32, 32, -32, 208, 240, 208, 240, -16, -32, -16, -32, 32 )

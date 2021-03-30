@@ -56,7 +56,7 @@ func _on_Detection(body: Node) -> void:
 	if body == self:
 		#print ("interacting with self, ignored")
 		return
-	if body == get_parent().get_node("Room"):
+	if body.is_in_group("Walls"):
 		return
 	can_interact = true
 	curr_target = body

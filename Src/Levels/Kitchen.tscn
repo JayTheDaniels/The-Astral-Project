@@ -21,7 +21,9 @@ __meta__ = {
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 40, 128 )
 
-[node name="KitchenCollision" type="StaticBody2D" parent="."]
+[node name="KitchenCollision" type="StaticBody2D" parent="." groups=[
+"Walls",
+]]
 position = Vector2( -216, 104 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KitchenCollision"]
