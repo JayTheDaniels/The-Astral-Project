@@ -40,9 +40,11 @@ player_spawn_location = Vector2( 160, 112 )
 
 [node name="Towels" parent="." instance=ExtResource( 5 )]
 position = Vector2( 142.565, 79.5371 )
+InteractText = "The most important thing I own."
 
 [node name="Painting" parent="." instance=ExtResource( 5 )]
 position = Vector2( 39.104, 116.105 )
+InteractText = "Keeps things classy."
 
 [node name="Toilet Paper" parent="." instance=ExtResource( 5 )]
 position = Vector2( 19.4821, 48.6178 )
@@ -52,3 +54,4 @@ InteractText = "Toilet paper... I remember when this was worth a lot."
 [node name="Toilet" parent="." instance=ExtResource( 5 )]
 position = Vector2( 39.9959, 51.8881 )
 scale = Vector2( 0.64, 0.68 )
+InteractText = "Everyone  sits."

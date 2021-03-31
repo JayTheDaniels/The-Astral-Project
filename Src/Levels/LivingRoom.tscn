@@ -61,11 +61,14 @@ InteractText = "I don't recognize this face anymore."
 [node name="Table" parent="." instance=ExtResource( 5 )]
 position = Vector2( 39.6986, 122.943 )
 scale = Vector2( 2.72, 1.72 )
+InteractText = "Is it time for breakfast yet?"
 
 [node name="Stool" parent="." instance=ExtResource( 5 )]
 position = Vector2( 183.295, 116.7 )
 scale = Vector2( 0.740745, 0.666667 )
+InteractText = "A seat next to an open fire."
 
 [node name="Flowers" parent="." instance=ExtResource( 5 )]
 position = Vector2( 141.376, 155.349 )
 scale = Vector2( 1, 0.399999 )
+InteractText = "Smells nice."

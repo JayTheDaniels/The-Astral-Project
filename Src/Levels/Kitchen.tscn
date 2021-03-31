@@ -41,12 +41,16 @@ player_spawn_location = Vector2( 256, 88 )
 
 [node name="Stove" parent="." instance=ExtResource( 5 )]
 position = Vector2( 29.174, 61.4436 )
+InteractText = "Egg for these trying times."
 
 [node name="Microwave" parent="." instance=ExtResource( 5 )]
 position = Vector2( 68.7719, 55.7868 )
+InteractText = "No kitchen is complete without radiation."
 
 [node name="Sink" parent="." instance=ExtResource( 5 )]
 position = Vector2( 148.321, 53.6654 )
+InteractText = "Water is life."
 
 [node name="Fridge" parent="." instance=ExtResource( 5 )]
 position = Vector2( 109.784, 54.019 )
+InteractText = "It's mostly filled with eggs."

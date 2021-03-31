@@ -37,7 +37,10 @@ next_scene_path = "res://Src/Levels/Hallway.tscn"
 player_spawn_location = Vector2( 104, 88 )
 
 [node name="Desk" parent="." instance=ExtResource( 5 )]
-position = Vector2( 102.429, 78.0506 )
+position = Vector2( 101.537, 74.7803 )
+InteractText = "Always more work than
+there is time to do it in."
 
 [node name="Mirror" parent="." instance=ExtResource( 5 )]
 position = Vector2( 61.6989, 61.1044 )
+InteractText = "It's me! Oh no..."

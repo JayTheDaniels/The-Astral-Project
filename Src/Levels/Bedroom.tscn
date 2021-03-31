@@ -45,15 +45,22 @@ player_spawn_location = Vector2( 248, 96 )
 
 [node name="Bed" parent="." instance=ExtResource( 5 )]
 position = Vector2( 29.7784, 68.553 )
+InteractText = "Can I sleep if I've never woken up?"
 
 [node name="Couch" parent="." instance=ExtResource( 5 )]
-position = Vector2( 94.6697, 136.203 )
+position = Vector2( 95.1416, 132.427 )
+scale = Vector2( 0.720001, 1 )
+InteractText = "Feels like most of my time is spent sitting here."
 
 [node name="Television" parent="." instance=ExtResource( 5 )]
-position = Vector2( 121.57, 107.179 )
+position = Vector2( 121.806, 112.37 )
+scale = Vector2( 0.960005, 1.16 )
+InteractText = "Nothing intereseting on."
 
 [node name="Dresser" parent="." instance=ExtResource( 5 )]
-position = Vector2( 91.1302, 67.6091 )
+position = Vector2( 90.4223, 56.0466 )
+InteractText = "I only own purple hoodies."
 
 [node name="Books" parent="." instance=ExtResource( 5 )]
-position = Vector2( 121.098, 43.3043 )
+position = Vector2( 121.098, 40.4727 )
+InteractText = "I'll get to reading these eventually..."

@@ -49,4 +49,5 @@ next_scene_path = "res://Src/Levels/Bedroom.tscn"
 player_spawn_location = Vector2( 48, 144 )
 
 [node name="Painting" parent="." instance=ExtResource( 5 )]
-position = Vector2( 183.677, 64.6256 )
+position = Vector2( 184.031, 60.7365 )
+InteractText = "Mom's always watching."
