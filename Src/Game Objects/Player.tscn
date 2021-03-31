@@ -1,11 +1,12 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Src/Code/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/YouPlayer.png" type="Texture" id=2]
+[ext_resource path="res://Assets/iconset.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 5.1572
-height = 14.3399
+height = 25.6623
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 19.9308
@@ -245,5 +246,13 @@ active = true
 parameters/playback = SubResource( 24 )
 parameters/Idle/blend_position = Vector2( -0.000936329, -0.00472105 )
 parameters/Walk/blend_position = Vector2( -0.000936329, 0 )
+
+[node name="iconset" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -30 )
+texture = ExtResource( 3 )
+vframes = 12
+hframes = 12
+frame = 67
 [connection signal="body_entered" from="Detection" to="." method="_on_Detection"]
 [connection signal="body_exited" from="Detection" to="." method="_off_Detection"]

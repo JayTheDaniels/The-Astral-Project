@@ -60,6 +60,7 @@ func _on_Detection(body: Node) -> void:
 		return
 	can_interact = true
 	curr_target = body
+	$iconset.visible = true
 	print("can interact with " + curr_target.name)
 
 
@@ -67,4 +68,5 @@ func _off_Detection(body: Node) -> void:
 	#when something exits the player's detection, if not the thing being targetted, player can't interact
 	if curr_target == body:
 		can_interact = false
+		$iconset.visible = false
 		print("lost interact with " + curr_target.name)

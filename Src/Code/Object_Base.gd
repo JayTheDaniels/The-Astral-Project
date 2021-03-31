@@ -5,7 +5,7 @@ extends StaticBody2D
 #Overwrite/overload the interaction() function for new objects
 
 export var InteractText = '' 
-onready var dialogue = get_parent().get_parent().get_node("UI/CanvasLayer/PopupDialog")
+onready var dialogue = get_parent().get_node("UI/CanvasLayer/PopupDialog")
 
 
 func interaction():
