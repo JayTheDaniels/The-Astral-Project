@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 8.40639
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "LeelaIdleDown"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -21,7 +21,7 @@ tracks/0/keys = {
 "values": [ 14 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "LeelaIdleLeft"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -36,7 +36,7 @@ tracks/0/keys = {
 "values": [ 16, 15 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "LeelaIdleRight"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -51,7 +51,7 @@ tracks/0/keys = {
 "values": [ 13, 12 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 resource_name = "LeelaIdleUp"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -60,13 +60,13 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 15 ]
+"values": [ 23, 17 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=6]
 resource_name = "LeelaWalkDown"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -81,7 +81,7 @@ tracks/0/keys = {
 "values": [ 14 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=7]
 resource_name = "LeelaWalkLeft"
 length = 0.6
 loop = true
@@ -98,8 +98,7 @@ tracks/0/keys = {
 "values": [ 11, 10, 9, 8, 7, 6 ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "LeelaWalkRight"
+[sub_resource type="Animation" id=8]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -117,6 +116,8 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=9]
 resource_name = "LeelaWalkUp"
+length = 0.8
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -124,10 +125,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 12 ]
+"values": [ 18, 19, 20, 21, 22, 23, 24, 25 ]
 }
 
 [sub_resource type="AnimationNodeAnimation" id=10]
@@ -202,7 +203,7 @@ script = ExtResource( 2 )
 position = Vector2( -0.33371, 0 )
 scale = Vector2( 0.395151, 0.395151 )
 texture = ExtResource( 1 )
-hframes = 17
+hframes = 28
 frame = 14
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -210,13 +211,13 @@ shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "LeelaIdleDown"
-anims/LeelaIdleDown = SubResource( 3 )
-anims/LeelaIdleLeft = SubResource( 4 )
-anims/LeelaIdleRight = SubResource( 5 )
-anims/LeelaIdleUp = SubResource( 6 )
-anims/LeelaWalkDown = SubResource( 7 )
-anims/LeelaWalkLeft = SubResource( 8 )
-anims/LeelaWalkRight = SubResource( 2 )
+anims/LeelaIdleDown = SubResource( 2 )
+anims/LeelaIdleLeft = SubResource( 3 )
+anims/LeelaIdleRight = SubResource( 4 )
+anims/LeelaIdleUp = SubResource( 5 )
+anims/LeelaWalkDown = SubResource( 6 )
+anims/LeelaWalkLeft = SubResource( 7 )
+anims/LeelaWalkRight = SubResource( 8 )
 anims/LeelaWalkUp = SubResource( 9 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
