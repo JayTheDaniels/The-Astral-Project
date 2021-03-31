@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Assets/darkPurple.png" type="Texture" id=1]
+[ext_resource path="res://Assets/AstralBedroomBackground.png" type="Texture" id=1]
 [ext_resource path="res://Src/UI/UI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Src/Game Objects/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Src/Game Objects/Leela.tscn" type="PackedScene" id=4]
@@ -8,9 +8,11 @@
 [node name="Astral_Level_Base" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 1373.0
-margin_bottom = 811.0
-rect_scale = Vector2( 0.25, 0.25 )
+margin_left = -32.0
+margin_top = -16.0
+margin_right = 1468.0
+margin_bottom = 1384.0
+rect_scale = Vector2( 0.16, 0.16 )
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 2
@@ -18,11 +20,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Leela" parent="." instance=ExtResource( 4 )]
+position = Vector2( 97.8544, 52.5792 )
+collision_layer = 1
+
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 160.094, 54.9846 )
 
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
-[node name="Leela" parent="." instance=ExtResource( 4 )]
-position = Vector2( 97.8544, 52.5792 )
-collision_layer = 1
+[node name="AstralLevelBedroomBoundary" type="StaticBody2D" parent="." groups=[
+"Walls",
+]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AstralLevelBedroomBoundary"]
+polygon = PoolVector2Array( 8, 32, 8, 168, 133.764, 168, 136, 152, 152, 152, 152, 168, 176, 168, 176, 48, 176, 48, 176, 32, 176, -16, 216, -16, 216, 216, -40, 216, -40, -16, 176, -16, 176, 32, 40, 32, 40, 64, 24, 64, 24, 32 )
+
+[node name="AstralLevelObjectBoundary" type="StaticBody2D" parent="." groups=[
+"Walls",
+]]
+position = Vector2( 104, 120 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AstralLevelObjectBoundary"]
+polygon = PoolVector2Array( -16, 0, -16, 8, 0, 8, 8, 0, 24, -8, 24, -24, 8, -24, 8, 0 )

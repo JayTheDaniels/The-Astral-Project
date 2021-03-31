@@ -26,6 +26,12 @@ position = Vector2( 160, 112 )
 margin_left = 1.0
 margin_right = 1.0
 
+[node name="BedroomObjectCollision" type="StaticBody2D" parent="."]
+position = Vector2( 104, 160 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BedroomObjectCollision"]
+polygon = PoolVector2Array( 0, -32, -16, -32, -16, -40, 8, -40, 8, -64, 24, -64, 24, -48, 0, -40 )
+
 [node name="Door2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 208, 112 )
 next_scene_path = "res://Src/Levels/Bathroom.tscn"
