@@ -1,14 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Src/Code/PortalButton.gd" type="Script" id=1]
 [ext_resource path="res://Src/Code/InvisibleButton.gd" type="Script" id=2]
 [ext_resource path="res://Src/Code/SpeedButton.gd" type="Script" id=3]
 [ext_resource path="res://Src/Code/UI.gd" type="Script" id=4]
 [ext_resource path="res://Src/UI/PopupDialog.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI.tres" type="Theme" id=6]
 
 [node name="UI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 6 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -20,9 +22,9 @@ __meta__ = {
 }
 
 [node name="Lives" type="Label" parent="CanvasLayer"]
-visible = false
 margin_right = 112.0
 margin_bottom = 14.0
+theme = ExtResource( 6 )
 text = "Lives Placeholder: %s"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -33,12 +35,13 @@ anchor_top = 1.0
 anchor_bottom = 1.0
 margin_top = -20.0
 margin_right = 175.0
+theme = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PortalButton" type="Button" parent="CanvasLayer/HBoxContainer"]
-margin_right = 49.0
+margin_right = 46.0
 margin_bottom = 20.0
 text = "Portal"
 script = ExtResource( 1 )
@@ -47,8 +50,8 @@ __meta__ = {
 }
 
 [node name="InvisibleButton" type="Button" parent="CanvasLayer/HBoxContainer"]
-margin_left = 53.0
-margin_right = 120.0
+margin_left = 50.0
+margin_right = 115.0
 margin_bottom = 20.0
 text = "Invisible"
 script = ExtResource( 2 )
@@ -57,8 +60,8 @@ __meta__ = {
 }
 
 [node name="SpeedButton" type="Button" parent="CanvasLayer/HBoxContainer"]
-margin_left = 124.0
-margin_right = 175.0
+margin_left = 119.0
+margin_right = 163.0
 margin_bottom = 20.0
 text = "SPEED"
 script = ExtResource( 3 )

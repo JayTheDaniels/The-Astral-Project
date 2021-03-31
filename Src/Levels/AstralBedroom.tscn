@@ -1,40 +1,65 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Src/Game Objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Src/UI/UI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Src/Game Objects/Leela.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Assets/bedroom4_final_astralworld.png" type="Texture" id=4]
+[ext_resource path="res://Assets/AstralBedroomBackground.png" type="Texture" id=4]
+[ext_resource path="res://Src/Game Objects/Base_Object.tscn" type="PackedScene" id=5]
 
-[node name="Node2D" type="Node2D"]
+[node name="Astral_Level_Base" type="YSort"]
 
-[node name="AstralBedroomBackground" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 margin_left = -32.0
 margin_top = -16.0
-margin_right = 1504.0
-margin_bottom = 1392.0
+margin_right = 1468.0
+margin_bottom = 1384.0
 rect_scale = Vector2( 0.16, 0.16 )
 texture = ExtResource( 4 )
+expand = true
+stretch_mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 80, 144 )
-
 [node name="Leela" parent="." instance=ExtResource( 3 )]
-position = Vector2( 96, 152 )
+pause_mode = 2
+position = Vector2( 97.8544, 52.5792 )
+collision_layer = 1
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160.094, 54.9846 )
 
 [node name="UI" parent="." instance=ExtResource( 2 )]
+pause_mode = 2
 
-[node name="AstralBedroomWallCollision" type="StaticBody2D" parent="."]
-collision_layer = 3
+[node name="AstralLevelBedroomBoundary" type="StaticBody2D" parent="." groups=[
+"Walls",
+]]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AstralBedroomWallCollision"]
-polygon = PoolVector2Array( -32, 0, -32, 208, 264, 208, 264, 0, -32, 0, 8, 32, 22.9752, 32, 24, 64, 40, 64, 40, 32, 75.803, 32, 72, 56, 104, 48, 106.958, 32, 176, 32, 176, 168, 152, 168, 152, 152, 136, 152, 136, 168, 8, 168, 8, 32 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AstralLevelBedroomBoundary"]
+polygon = PoolVector2Array( 8, 32, 8, 168, 133.764, 168, 136, 152, 152, 152, 152, 168, 176, 168, 176, 48, 176, 48, 176, 32, 176, -16, 216, -16, 216, 216, -40, 216, -40, -16, 176, -16, 176, 32, 40, 32, 40, 64, 24, 64, 24, 32 )
 
-[node name="AstralBedroomObjectCollision" type="StaticBody2D" parent="."]
-position = Vector2( 88, 120 )
-collision_layer = 3
+[node name="AstralBookshelf" parent="." instance=ExtResource( 5 )]
+position = Vector2( 122.051, 39.1041 )
+InteractText = "Are my books okay?"
+ScavengerHuntText = "Poor lost, wandering soul. Sometimes sitting
+ in the moment is the only way to move forward."
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AstralBedroomObjectCollision"]
-polygon = PoolVector2Array( 16, 0, 24, -24, 40, -24, 40, -8, 24, -8, 16, 8, 0, 8, 0, 0 )
+[node name="AstralBed" parent="." instance=ExtResource( 5 )]
+position = Vector2( 29.8877, 59.3206 )
+InteractText = "I couldn't imagine sleeping in this..."
+ScavengerHuntText = "Your body turns off and your mind begins to play. 
+Now find a way to do the opposite."
+
+[node name="AstralCouch" parent="." instance=ExtResource( 5 )]
+position = Vector2( 94.6994, 135.132 )
+InteractText = "My furniture is going to need to be cleaned after this..."
+ScavengerHuntText = "Sometimes we stew when we need to rest.
+Correct this error and I'll show you the way home."
+
+[node name="AstralTV" parent="." instance=ExtResource( 5 )]
+position = Vector2( 122.051, 109.862 )
+InteractText = "Seems this place only gets one channel...
+Static."
+ScavengerHuntText = "Your mind turns off, your body enjoys sensation.
+Leela beckons you back over."

@@ -3,6 +3,9 @@ extends KinematicBody2D
 var follow_player := false
 var speed = 100
 var velocity = Vector2.ZERO
+var interaction = 0
+var dialogueCounter = 0
+var dialogueTotal = 0
 onready var dialogue = get_parent().get_node("UI/CanvasLayer/PopupDialog")
 onready var player = get_parent().get_node("Player")
 onready var animationPlayer = $AnimationPlayer
@@ -27,11 +30,37 @@ func _physics_process(delta):
 
 func interaction():
 	print("Is interacting with " + self.name)
-	dialogue.dialogue = "Hiya friend, I'm Leela!"
-	dialogue.open()
-	#dialogue.dialogue = "Not common to see humans around here. I'm coming with you for a bit"
-	get_parent().get_node("UI/CanvasLayer/Lives").show()
-	follow()
+	dialogue()
 
 func follow():
 	follow_player = true
+
+func dialogue():
+	if interaction == 0:
+		dialogueTotal = 4
+		if dialogueCounter == 0:
+			dialogue.dialogue = "A visitor..? From the mortal plane no less!"
+			dialogue.open(self.get_path())
+		if dialogueCounter == 1:
+			dialogue.dialogue = "Not common to see humans around here. Are you lost?"
+			dialogue.open(self.get_path())
+		if dialogueCounter == 2:
+			dialogue.dialogue = "Don't worry human. I can show you how to navigate \n The Astral Plane."
+			dialogue.open(self.get_path())
+		if dialogueCounter == 3:
+			dialogue.dialogue = "Let's make a game of it! Beside me if your book shelf. \n Your first clue waits for you there."
+			dialogue.open(self.get_path())
+			Global.scavengerHuntStage = 1
+		if dialogueCounter == 4:
+			dialogue.dialogue = "Take your time human, there's no such thing here."
+			interaction = 1
+	if interaction == 1:
+		if Global.scavengerHuntStage == 5:
+			dialogue.dialogue = "You've impressed me. That's all we have for now but \n allow me to accompany you through The Astral Plane."
+			dialogue.open(self.get_path())
+			get_parent().get_node("UI/CanvasLayer/Lives").show()
+			follow()
+		else:
+			dialogueTotal = 1
+			dialogue.dialogue = "Take your time human, there's no such thing here."
+			dialogue.open(self.get_path())

@@ -6,7 +6,7 @@
 [ext_resource path="res://Src/Game Objects/Door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Src/Game Objects/Base_Object.tscn" type="PackedScene" id=5]
 
-[node name="Level_Base" type="Node2D"]
+[node name="Level_Base" type="YSort"]
 
 [node name="BedroomBackground" type="TextureRect" parent="."]
 margin_left = -32.0
@@ -25,12 +25,6 @@ position = Vector2( 160, 112 )
 [node name="UI" parent="." instance=ExtResource( 3 )]
 margin_left = 1.0
 margin_right = 1.0
-
-[node name="BedroomObjectCollision" type="StaticBody2D" parent="."]
-position = Vector2( 104, 160 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BedroomObjectCollision"]
-polygon = PoolVector2Array( 0, -32, -16, -32, -16, -40, 8, -40, 8, -64, 24, -64, 24, -48, 0, -40 )
 
 [node name="Door2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 208, 112 )

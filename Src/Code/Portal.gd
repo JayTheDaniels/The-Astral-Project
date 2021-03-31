@@ -1,6 +1,6 @@
 extends "res://Src/Code/Object_Base.gd"
 
-var astral_scene: String = "res://Src/Levels/Astral_Level_Base.tscn"
+var astral_scene: String = "res://Src/Levels/AstralBedroom.tscn"
 var normal_scene: String = "res://Src/Levels/Bedroom.tscn"
 
 #add the next scene level to the root node. Hide everything from this one
