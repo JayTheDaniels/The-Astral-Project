@@ -29,7 +29,7 @@ func close():
 	
 func _input(event):
 	if Input.is_action_just_pressed("accept"):
-		if open == true:
+		if open == true :
 			next()
 		else:
 			pass

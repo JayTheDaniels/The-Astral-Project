@@ -23,8 +23,8 @@ __meta__ = {
 
 [node name="Leela" parent="." instance=ExtResource( 3 )]
 pause_mode = 2
-position = Vector2( 97.8544, 52.5792 )
-collision_layer = 1
+position = Vector2( 99.3527, 55.5758 )
+collision_mask = 3
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 160.094, 54.9846 )
@@ -43,23 +43,23 @@ polygon = PoolVector2Array( 8, 32, 8, 168, 133.764, 168, 136, 152, 152, 152, 152
 position = Vector2( 122.051, 39.1041 )
 InteractText = "Are my books okay?"
 ScavengerHuntText = "Poor lost, wandering soul. Sometimes sitting
- in the moment is the only way to move forward."
+ still is the only way to move forward."
 
 [node name="AstralBed" parent="." instance=ExtResource( 5 )]
 position = Vector2( 29.8877, 59.3206 )
 InteractText = "I couldn't imagine sleeping in this..."
-ScavengerHuntText = "Your body turns off and your mind begins to play. 
+ScavengerHuntText = "Your body turns off and your mind begins to wander. 
 Now find a way to do the opposite."
 
 [node name="AstralCouch" parent="." instance=ExtResource( 5 )]
 position = Vector2( 94.6994, 135.132 )
 InteractText = "My furniture is going to need to be cleaned after this..."
-ScavengerHuntText = "Sometimes we stew when we need to rest.
-Correct this error and I'll show you the way home."
+ScavengerHuntText = "Stillness is good, but sometimes we need rest.
+Do this and I'll show you what dreams this realm offers."
 
 [node name="AstralTV" parent="." instance=ExtResource( 5 )]
 position = Vector2( 122.051, 109.862 )
 InteractText = "Seems this place only gets one channel...
 Static."
-ScavengerHuntText = "Your mind turns off, your body enjoys sensation.
-Leela beckons you back over."
+ScavengerHuntText = "Your mind turns off, your body reacts to the images.
+Leela beckons for you."
