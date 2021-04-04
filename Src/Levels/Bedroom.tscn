@@ -48,7 +48,7 @@ position = Vector2( 29.7784, 68.553 )
 InteractText = "Can I sleep if I've never woken up?"
 
 [node name="Couch" parent="." instance=ExtResource( 5 )]
-position = Vector2( 95.1416, 132.427 )
+position = Vector2( 95.1416, 127.427 )
 scale = Vector2( 0.720001, 1 )
 InteractText = "Feels like most of my time is spent sitting here."
 

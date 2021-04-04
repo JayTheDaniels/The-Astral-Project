@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/LeelaFrames.png" type="Texture" id=1]
 [ext_resource path="res://Src/Code/Leela.gd" type="Script" id=2]
 
-[sub_resource type="CapsuleShape2D" id=24]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 4.39462
 height = 5.36757
 
@@ -16,10 +16,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 14 ]
+"values": [ 33, 14 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -69,6 +69,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=6]
 resource_name = "LeelaWalkDown"
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -76,10 +77,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 14 ]
+"values": [ 28, 28, 29, 30, 31, 32, 33, 34, 35, 36 ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -204,11 +205,10 @@ script = ExtResource( 2 )
 position = Vector2( 0, -2 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 1 )
-hframes = 28
-frame = 15
+hframes = 38
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 24 )
+shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "LeelaIdleDown"

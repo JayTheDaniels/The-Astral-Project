@@ -46,19 +46,19 @@ ScavengerHuntText = "Poor lost, wandering soul. Sometimes sitting
  still is the only way to move forward."
 
 [node name="AstralBed" parent="." instance=ExtResource( 5 )]
-position = Vector2( 29.8877, 59.3206 )
+position = Vector2( 31.8877, 59.3206 )
 InteractText = "I couldn't imagine sleeping in this..."
 ScavengerHuntText = "Your body turns off and your mind begins to wander. 
 Now find a way to do the opposite."
 
 [node name="AstralCouch" parent="." instance=ExtResource( 5 )]
-position = Vector2( 94.6994, 135.132 )
+position = Vector2( 94.6994, 127.132 )
 InteractText = "My furniture is going to need to be cleaned after this..."
 ScavengerHuntText = "Stillness is good, but sometimes we need rest.
 Do this and I'll show you what dreams this realm offers."
 
 [node name="AstralTV" parent="." instance=ExtResource( 5 )]
-position = Vector2( 122.051, 109.862 )
+position = Vector2( 122.051, 108.862 )
 InteractText = "Seems this place only gets one channel...
 Static."
 ScavengerHuntText = "Your mind turns off, your body reacts to the images.
