@@ -23,6 +23,16 @@ func interaction():
 func scavengerHunt():
 	if Global.scavengerHuntLevel == 1:
 		bedroom_object()
+	if Global.scavengerHuntLevel == 2:
+		bathroom_object()
+	if Global.scavengerHuntLevel == 3:
+		office_object()
+	if Global.scavengerHuntLevel == 4:
+		living_room_object()
+	if Global.scavengerHuntLevel == 5:
+		kitchen_object()
+	if Global.scavengerHuntLevel == 6:
+		hallway_object()
 
 func bedroom_object():
 	if Global.scavengerHuntStage == 1:
@@ -41,3 +51,18 @@ func bedroom_object():
 		if self.name == "AstralTV":
 			print ("Objective Updated!")
 			Global.scavengerHuntStage = 5
+
+func bathroom_object():
+	pass
+
+func office_object():
+	pass
+
+func living_room_object():
+	pass
+
+func kitchen_object():
+	pass
+
+func hallway_object():
+	pass

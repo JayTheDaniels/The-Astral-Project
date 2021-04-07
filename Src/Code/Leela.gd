@@ -11,6 +11,7 @@ onready var player = get_parent().get_node("Player")
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
+const portal = preload("res://Src/Code/Portal.gd")
 
 func _physics_process(delta):
 	if follow_player == true:
@@ -64,7 +65,7 @@ func bedroom():
 		dialogue.dialogue = "Don't worry human. I can show you how to navigate \n The Astral Plane."
 		dialogue.open(self.get_path())
 	if dialogueCounter == 3:
-		dialogue.dialogue = "Let's make a game of it! Beside me if your book shelf. \n Your first clue waits for you there."
+		dialogue.dialogue = "Let's make a game of it! Beside me is your book shelf. \n Your first clue waits for you there."
 		dialogue.open(self.get_path())
 		Global.scavengerHuntLevel = 1
 		Global.scavengerHuntStage = 1
@@ -73,11 +74,11 @@ func bedroom():
 		interaction_Counter = 1
 	if interaction_Counter == 1:
 		if Global.scavengerHuntStage == 5:
-			dialogue.dialogue = "You've impressed me. That's all we have for now but \n allow me to accompany you through The Astral Plane."
+			dialogue.dialogue = "You've impressed me, human. \n Return to your bed when you're ready to leave."
 			dialogue.open(self.get_path())
 			get_parent().get_node("UI/CanvasLayer/Lives").show()
-			
-			#follow()
+			# use this code for setting the return object
+			get_tree().get_root().get_node("/root/Astral_Level_Base/AstralBed").set_script(portal)
 		else:
 			dialogueTotal = 1
 			dialogue.dialogue = "Take your time human, there's no such thing here."

@@ -33,8 +33,17 @@ func set_scavengerHuntStage(value: int) -> void:
 	print ("Set stage: ", scavengerHuntStage)
 	if scavengerHuntLevel == 1:
 		bedroom()
-		
-		
+	if scavengerHuntLevel == 2:
+		bathroom()
+	if scavengerHuntLevel == 3:
+		office()
+	if scavengerHuntLevel == 4:
+		living_room()
+	if scavengerHuntLevel == 5:
+		kitchen()
+	if scavengerHuntLevel == 6:
+		hallway()
+
 func bedroom():
 	if scavengerHuntStage == 1:
 		var bookshelf = get_tree().get_root().get_node("/root/Astral_Level_Base/AstralBookshelf")
@@ -50,3 +59,18 @@ func bedroom():
 		tv.InteractText = tv.ScavengerHuntText
 	else:
 		print("Scavenger error")
+
+func bathroom():
+	pass
+
+func office():
+	pass
+
+func living_room():
+	pass
+
+func kitchen():
+	pass
+
+func hallway():
+	pass
