@@ -28,7 +28,7 @@ position = Vector2( 40, 128 )
 position = Vector2( -216, 104 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KitchenCollision"]
-polygon = PoolVector2Array( 272, 40, 296, 40, 296, 24, 320, 24, 320, 16, 336, 16, 344, 8, 352, 8, 352, 16, 376, 16, 376, -56, 232, -56, 232, 64, 232, 72, 232, 72, 168, -136, 440, -136, 440, 112, 152, 112, 152, -136, 168, -136, 232, 72, 272, 72 )
+polygon = PoolVector2Array( 272, 40, 296, 40, 296, 24, 320, 24, 320, 16, 336, 16, 344, 8, 352, 8, 352, 16, 376, 16, 376, -40, 232, -40, 232, 64, 232, 72, 232, 72, 168, -136, 440, -136, 440, 112, 152, 112, 152, -136, 168, -136, 232, 72, 272, 72 )
 
 [node name="UI" parent="." instance=ExtResource( 3 )]
 margin_left = 1.0

@@ -31,7 +31,7 @@ margin_right = 1.0
 ]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HallwayCollision"]
-polygon = PoolVector2Array( 8, 0, 16, 64, 8, 64, 8, 160, 336, 160, 336, 64, 264, 64, 264, 40, 232, 40, 233.03, 64, 120, 64, 120, 40, 88, 40, 88, 64, 8, 64, 8, -40, 376, -40, 376, 232, -16, 224, -16, -40, 8, -40 )
+polygon = PoolVector2Array( 88, 72, 8, 72, 8, 160, 336, 160, 336, 72, 264, 72, 264, 40, 232, 40, 232, 72, 120, 72, 120, 40, 88, 40, 88, 72, 8, -40, 376, -40, 376, 232, -16, 224, -16, -40, 8, -40 )
 
 [node name="Door" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, 112 )
@@ -39,12 +39,12 @@ next_scene_path = "res://Src/Levels/LivingRoom.tscn"
 player_spawn_location = Vector2( 240, 128 )
 
 [node name="Door2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 104, 32 )
+position = Vector2( 104, 48 )
 next_scene_path = "res://Src/Levels/Office.tscn"
 player_spawn_location = Vector2( 80, 128 )
 
 [node name="Door3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 248, 32 )
+position = Vector2( 248, 48 )
 next_scene_path = "res://Src/Levels/Bedroom.tscn"
 player_spawn_location = Vector2( 48, 144 )
 

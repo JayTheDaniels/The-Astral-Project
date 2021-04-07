@@ -21,6 +21,10 @@ func interaction():
 	#get_parent().get_node("UI/CanvasLayer/Lives").show()
 
 func scavengerHunt():
+	if Global.scavengerHuntLevel == 1:
+		bedroom_object()
+
+func bedroom_object():
 	if Global.scavengerHuntStage == 1:
 		if self.name == "AstralBookshelf":
 			print ("Objective Updated!")

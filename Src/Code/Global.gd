@@ -5,6 +5,7 @@ extends Node
 signal lives_updated
 signal scavengerHuntUpdated
 
+var scavengerHuntLevel = 0 setget set_scavengerHuntLevel
 var scavengerHuntStage = 0 setget set_scavengerHuntStage
 var total_lives = 9
 var remaining_lives = 9 setget set_lives, get_lives
@@ -18,12 +19,23 @@ func get_lives() -> int:
 
 var player_initial_map_position = Vector2(48, 144)
 
+func set_scavengerHuntLevel(value: int) -> void:
+	scavengerHuntLevel = value
+	emit_signal("scavengerHuntUpdated")
+	print ("Started Scavenger Hunt: ", scavengerHuntLevel)
+	
+
 func set_scavengerHuntStage(value: int) -> void:
 	scavengerHuntStage = value
 	emit_signal("scavengerHuntUpdated")
 	#global function controlling the scavenger hunt
 	#allows the scavenger text to appear
 	print ("Set stage: ", scavengerHuntStage)
+	if scavengerHuntLevel == 1:
+		bedroom()
+		
+		
+func bedroom():
 	if scavengerHuntStage == 1:
 		var bookshelf = get_tree().get_root().get_node("/root/Astral_Level_Base/AstralBookshelf")
 		bookshelf.InteractText = bookshelf.ScavengerHuntText
@@ -38,4 +50,3 @@ func set_scavengerHuntStage(value: int) -> void:
 		tv.InteractText = tv.ScavengerHuntText
 	else:
 		print("Scavenger error")
-		

@@ -29,7 +29,7 @@ margin_right = 1.0
 ]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OfficeCollision"]
-polygon = PoolVector2Array( 0, 0, 0, 56, 40, 56, 88, 56, 88, 72, 96, 72, 96, 80, 112, 80, 112, 72, 120, 72, 120, 56, 144, 56, 144, 160, 96, 160, 96, 184, 64, 184, 64.029, 160, 40, 160, 40, 56, 0, 56, 0, 200, 184, 200, 184, 0 )
+polygon = PoolVector2Array( 0, 0, 0, 56, 40, 64, 88, 64, 88, 72, 96, 72, 96, 80, 112, 80, 112, 72, 120, 72, 120, 64, 144, 64, 144, 160, 96, 160, 96, 184, 64, 184, 64.029, 160, 40, 160, 40, 64, 0, 56, 0, 200, 184, 200, 184, 0 )
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 80, 192 )
