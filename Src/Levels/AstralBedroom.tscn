@@ -47,9 +47,6 @@ ScavengerHuntText = "Poor lost, wandering soul. Sometimes sitting
 
 [node name="AstralBed" parent="." instance=ExtResource( 5 )]
 position = Vector2( 31.8877, 59.3206 )
-InteractText = "I couldn't imagine sleeping in this..."
-ScavengerHuntText = "Your body turns off and your mind begins to wander. 
-Now find a way to do the opposite."
 
 [node name="AstralCouch" parent="." instance=ExtResource( 5 )]
 position = Vector2( 94.6994, 127.132 )

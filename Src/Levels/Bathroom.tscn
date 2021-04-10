@@ -55,3 +55,7 @@ InteractText = "Toilet paper... I remember when this was worth a lot."
 position = Vector2( 39.9959, 51.8881 )
 scale = Vector2( 0.64, 0.68 )
 InteractText = "Everyone  sits."
+
+[node name="Mirror" parent="." instance=ExtResource( 5 )]
+position = Vector2( 88, 48 )
+scale = Vector2( 0.64, 0.68 )

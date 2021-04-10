@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Src/Game Objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/bedroom_bathroom_astralworld.png" type="Texture" id=2]
+[ext_resource path="res://Src/Game Objects/Leela.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Src/UI/UI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Src/Game Objects/Base_Object.tscn" type="PackedScene" id=5]
 
@@ -49,3 +50,6 @@ InteractText = "Toilet paper... I remember when this was worth a lot."
 position = Vector2( 56, 40 )
 scale = Vector2( 0.64, 0.68 )
 InteractText = "Everyone  sits."
+
+[node name="Leela" parent="." instance=ExtResource( 3 )]
+position = Vector2( 184, 104 )

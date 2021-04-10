@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/livingroom3_realworld.png" type="Texture" id=1]
 [ext_resource path="res://Src/Game Objects/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Src/UI/UI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Src/Game Objects/Leela.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Src/Game Objects/Base_Object.tscn" type="PackedScene" id=5]
 
 [node name="Level_Base" type="YSort"]
@@ -61,3 +62,6 @@ InteractText = "A seat next to an open fire."
 position = Vector2( 141.376, 155.349 )
 scale = Vector2( 1, 0.399999 )
 InteractText = "Smells nice."
+
+[node name="Leela" parent="." instance=ExtResource( 4 )]
+position = Vector2( 56, 112 )
