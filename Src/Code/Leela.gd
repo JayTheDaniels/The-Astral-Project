@@ -88,7 +88,20 @@ func bathroom():
 	pass
 
 func office():
-	pass
+	var interaction_Counter = 0
+	dialogueTotal = 1
+	if dialogueCounter == 0:
+		dialogue.dialogue = "Friend! Hello again... I have a new gift for you. \n A new puzzle to go with it."
+		dialogue.open(self.get_path())
+		interaction_Counter+= 1
+	if interaction_Counter == 1:
+		dialogueTotal = 2
+		if dialogueCounter == 1:
+			dialogue.dialogue = "Communicate with family, \n research, shop, and play games."
+			dialogue.open(self.get_path())
+		if dialogueCounter == 2:
+			dialogue.dialogue = "Since this invention swept your world, \n Human life has greatly changed."
+
 
 func living_room():
 	pass

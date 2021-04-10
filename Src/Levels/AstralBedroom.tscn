@@ -6,7 +6,9 @@
 [ext_resource path="res://Assets/AstralBedroomBackground.png" type="Texture" id=4]
 [ext_resource path="res://Src/Game Objects/Base_Object.tscn" type="PackedScene" id=5]
 
-[node name="Astral_Level_Base" type="YSort"]
+[node name="Level_Base" type="YSort" groups=[
+"Astral",
+]]
 
 [node name="Astral Bedroom Background" type="TextureRect" parent="."]
 margin_left = -32.0

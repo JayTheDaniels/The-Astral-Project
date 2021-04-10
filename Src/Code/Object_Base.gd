@@ -4,6 +4,10 @@ extends StaticBody2D
 #Other objects will inherit from this one
 #Overwrite/overload the interaction() function for new objects
 
+# consider adding an Astral Object class that inherits from this one
+
+
+#const portal = preload("res://Src/Code/Portal.gd")
 export(String, MULTILINE) var InteractText = ""
 export(String, MULTILINE) var ScavengerHuntText = ""
 onready var dialogue = get_parent().get_node("UI/CanvasLayer/PopupDialog")
@@ -13,7 +17,7 @@ var dialogueTotal = 0
 
 func interaction():
 	print("Is interacting with " + self.name)
-	print (dialogueCounter)
+	print ("Dialogue Count: ", dialogueCounter)
 	dialogue.dialogue = InteractText
 	dialogue.open(self.get_path())
 	if Global.scavengerHuntStage > 0:
@@ -56,7 +60,22 @@ func bathroom_object():
 	pass
 
 func office_object():
-	pass
+	if Global.scavengerHuntStage == 1:
+		if self.name == "TodoList":
+			print ("Objective Updated!")
+			Global.scavengerHuntStage = 2
+	if Global.scavengerHuntStage == 2:
+		if self.name == "HousePlant":
+			print ("Objective Updated!")
+			Global.scavengerHuntStage = 3
+	if Global.scavengerHuntStage == 3:
+		if self.name == "Desk":
+			print ("Objective Updated!")
+			Global.scavengerHuntStage = 4
+	if Global.scavengerHuntStage == 4:
+		if self.name == "TodoList":
+			print ("Objective Updated!")
+			Global.scavengerHuntStage = 5
 
 func living_room_object():
 	pass

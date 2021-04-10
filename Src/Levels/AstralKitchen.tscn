@@ -6,7 +6,9 @@
 [ext_resource path="res://Src/Game Objects/Leela.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Src/Game Objects/Base_Object.tscn" type="PackedScene" id=5]
 
-[node name="Level_Base" type="YSort"]
+[node name="Level_Base" type="YSort" groups=[
+"Astral",
+]]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 40, 128 )

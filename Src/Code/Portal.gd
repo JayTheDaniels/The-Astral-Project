@@ -16,7 +16,7 @@ func change_level() -> void:
 	#going forward, best to set this to a variable
 	#if possible, rather than destroying previous level, have them loaded simultaneously
 	#this will mean changing the change_scene() function with something else
-	if get_tree().get_root().get_node("/root/Level_Base"):
+	if get_tree().get_root().get_node("/root/Level_Base").is_in_group("Normal"):
 		get_tree().change_scene(astral_scene)
-	elif get_tree().get_root().get_node("/root/Astral_Level_Base"):
+	elif get_tree().get_root().get_node("/root/Level_Base").is_in_group("Astral"):
 		get_tree().change_scene(normal_scene)

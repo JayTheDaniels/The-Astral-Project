@@ -9,6 +9,7 @@ var scavengerHuntLevel = 0 setget set_scavengerHuntLevel
 var scavengerHuntStage = 0 setget set_scavengerHuntStage
 var total_lives = 9
 var remaining_lives = 9 setget set_lives, get_lives
+const portal = preload("res://Src/Code/Portal.gd")
 
 func set_lives(value: int) -> void:
 	remaining_lives = value
@@ -46,16 +47,16 @@ func set_scavengerHuntStage(value: int) -> void:
 
 func bedroom():
 	if scavengerHuntStage == 1:
-		var bookshelf = get_tree().get_root().get_node("/root/Astral_Level_Base/AstralBookshelf")
+		var bookshelf = get_tree().get_root().get_node("/root/Level_Base/AstralBookshelf")
 		bookshelf.InteractText = bookshelf.ScavengerHuntText
 	if scavengerHuntStage == 2:
-		var couch = get_tree().get_root().get_node("/root/Astral_Level_Base/AstralCouch")
+		var couch = get_tree().get_root().get_node("/root/Level_Base/AstralCouch")
 		couch.InteractText = couch.ScavengerHuntText
 	if scavengerHuntStage == 3:
-		var bed = get_tree().get_root().get_node("/root/Astral_Level_Base/AstralBed")
+		var bed = get_tree().get_root().get_node("/root/Level_Base/AstralBed")
 		bed.InteractText = bed.ScavengerHuntText
 	if scavengerHuntStage == 4:
-		var tv = get_tree().get_root().get_node("/root/Astral_Level_Base/AstralTV")
+		var tv = get_tree().get_root().get_node("/root/Level_Base/AstralTV")
 		tv.InteractText = tv.ScavengerHuntText
 	else:
 		print("Scavenger error")
@@ -64,7 +65,19 @@ func bathroom():
 	pass
 
 func office():
-	pass
+	var todo = get_tree().get_root().get_node("/root/Level_Base/TodoList")
+	if scavengerHuntStage == 2:
+		var plant = get_tree().get_root().get_node("/root/Level_Base/HousePlant")
+		plant.InteractText = plant.ScavengerHuntText
+	if scavengerHuntStage == 3:
+		var desk = get_tree().get_root().get_node("/root/Level_Base/Desk")
+		desk.InteractText = desk.ScavengerHuntText		
+	if scavengerHuntStage == 4:
+		#var tv = get_tree().get_root().get_node("/root/Level_Base/AstralTV")
+		#create a new script for todo list that inherets from base object
+		todo.InteractText = todo.ScavengerHuntText
+	if scavengerHuntStage == 5:
+		get_tree().get_root().get_node("/root/Level_Base/Mirror").set_script(portal)
 
 func living_room():
 	pass
