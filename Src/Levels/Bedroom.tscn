@@ -49,7 +49,7 @@ position = Vector2( 29.7784, 68.553 )
 script = ExtResource( 6 )
 
 [node name="Couch" parent="." instance=ExtResource( 5 )]
-position = Vector2( 95.1416, 127.427 )
+position = Vector2( 96, 128 )
 scale = Vector2( 0.720001, 1 )
 InteractText = "Feels like most of my time is spent sitting here."
 

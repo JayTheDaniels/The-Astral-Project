@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Src/Game Objects/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/bedroom_bathroom_astralworld.png" type="Texture" id=2]
+[ext_resource path="res://Src/UI/UI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Src/Game Objects/Base_Object.tscn" type="PackedScene" id=5]
+
+[node name="Level_Base" type="YSort"]
+
+[node name="AstralBathroomBackground" type="TextureRect" parent="."]
+margin_left = -200.0
+margin_top = -24.0
+margin_right = 2744.0
+margin_bottom = 1640.0
+rect_scale = Vector2( 0.16, 0.16 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 56, 144 )
+
+[node name="UI" parent="." instance=ExtResource( 4 )]
+margin_left = 1.0
+margin_right = 1.0
+
+[node name="BathroomCollision" type="StaticBody2D" parent="." groups=[
+"Walls",
+]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BathroomCollision"]
+polygon = PoolVector2Array( 24, 40, 48, 40, 72, 40, 128, 40, 128, 80, 160, 80, 216, 80, 216, 112, 216, 168, 8, 168, 8, 120, 64, 120, 64, 104, 8, 104, 8, 40, -32, 48, -32, 208, 240, 208, 240, -16, -32, -16, -32, 48, 8, 40 )
+
+[node name="Towels" parent="." instance=ExtResource( 5 )]
+position = Vector2( 160, 80 )
+InteractText = "The most important thing I own."
+
+[node name="Painting" parent="." instance=ExtResource( 5 )]
+position = Vector2( 39.104, 116.105 )
+InteractText = "Keeps things classy."
+
+[node name="Toilet Paper" parent="." instance=ExtResource( 5 )]
+position = Vector2( 32, 40 )
+scale = Vector2( 0.64, 1 )
+InteractText = "Toilet paper... I remember when this was worth a lot."
+
+[node name="Toilet" parent="." instance=ExtResource( 5 )]
+position = Vector2( 56, 40 )
+scale = Vector2( 0.64, 0.68 )
+InteractText = "Everyone  sits."

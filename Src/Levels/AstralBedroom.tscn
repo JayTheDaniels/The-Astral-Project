@@ -8,7 +8,7 @@
 
 [node name="Astral_Level_Base" type="YSort"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Astral Bedroom Background" type="TextureRect" parent="."]
 margin_left = -32.0
 margin_top = -16.0
 margin_right = 1468.0
