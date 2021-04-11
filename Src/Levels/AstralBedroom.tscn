@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/AstralBedroomBackground.png" type="Texture" id=4]
 [ext_resource path="res://Src/Game Objects/Base_Object.tscn" type="PackedScene" id=5]
 
-[node name="Level_Base" type="YSort" groups=[
+[node name="AstralBedroom" type="YSort" groups=[
 "Astral",
 ]]
 

@@ -10,6 +10,7 @@ extends StaticBody2D
 #const portal = preload("res://Src/Code/Portal.gd")
 export(String, MULTILINE) var InteractText = ""
 export(String, MULTILINE) var ScavengerHuntText = ""
+export var startpoint = false
 onready var dialogue = get_parent().get_node("UI/CanvasLayer/PopupDialog")
 var dialogueCounter = 0
 var dialogueTotal = 0
@@ -20,9 +21,16 @@ func interaction():
 	print ("Dialogue Count: ", dialogueCounter)
 	dialogue.dialogue = InteractText
 	dialogue.open(self.get_path())
-	if Global.scavengerHuntStage > 0:
+	if startpoint == true:
+		get_start()
+	else:
 		scavengerHunt()
 	#get_parent().get_node("UI/CanvasLayer/Lives").show()
+
+func get_start():
+	if self.name == "Microwave":
+		Global.scavengerHuntLevel = 5
+		Global.scavengerHuntStage = 1
 
 func scavengerHunt():
 	if Global.scavengerHuntLevel == 1:
@@ -76,12 +84,38 @@ func office_object():
 		if self.name == "TodoList":
 			print ("Objective Updated!")
 			Global.scavengerHuntStage = 5
+	if Global.scavengerHuntStage == 6:
+		if self.name == "Desk":
+			print ("Objective Updated!")
+			Global.scavengerHuntStage = 7
 
 func living_room_object():
 	pass
 
 func kitchen_object():
-	pass
+	if Global.scavengerHuntStage == 1:
+		if self.name == "Fridge":
+			print ("Objective Updated!")
+			Global.scavengerHuntStage = 2
+	if Global.scavengerHuntStage == 3:
+		if self.name == "Sink":
+			print ("Ojbective Updated!")
+			Global.scavengerHuntStage = 4
+	if Global.scavengerHuntStage == 4:
+		if self.name == "Stove":
+			print("Objective Updated!")
+			Global.scavengerHuntStage = 5
+	if Global.scavengerHuntStage == 5:
+		if self.name == "Fridge":
+			print("Objective Updated!")
+			Global.scavengerHuntStage = 6
+	if Global.scavengerHuntStage == 6:
+		if self.name == "Stove":
+			print("Objective Updated!")
+			Global.scavengerHuntStage = 7
+
+
+
 
 func hallway_object():
 	pass

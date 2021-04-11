@@ -5,9 +5,9 @@
 [ext_resource path="res://Src/UI/UI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Src/Game Objects/Door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Src/Game Objects/Base_Object.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Src/Game Objects/TodoList.gd" type="Script" id=6]
+[ext_resource path="res://Src/Code/TodoList.gd" type="Script" id=6]
 
-[node name="Level_Base" type="YSort" groups=[
+[node name="Office" type="YSort" groups=[
 "Normal",
 ]]
 

@@ -6,7 +6,7 @@
 [ext_resource path="res://Src/Game Objects/Door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Src/Game Objects/Base_Object.tscn" type="PackedScene" id=5]
 
-[node name="Level_Base" type="YSort"]
+[node name="Kitchen" type="YSort"]
 
 [node name="LivingRoomBackground" type="TextureRect" parent="."]
 margin_left = -248.0
@@ -45,12 +45,17 @@ InteractText = "Egg for these trying times."
 
 [node name="Microwave" parent="." instance=ExtResource( 5 )]
 position = Vector2( 68.7719, 55.7868 )
-InteractText = "No kitchen is complete without radiation."
+InteractText = "Find me food first, gosh."
+ScavengerHuntText = "Off you go!"
+startpoint = true
 
 [node name="Sink" parent="." instance=ExtResource( 5 )]
 position = Vector2( 148.321, 53.6654 )
-InteractText = "Water is life."
+InteractText = "When was the last time you paid your water bill?
+Electricity is a warm blessing."
 
 [node name="Fridge" parent="." instance=ExtResource( 5 )]
 position = Vector2( 109.784, 54.019 )
-InteractText = "It's mostly filled with eggs."
+InteractText = "It's like a prison for food."
+ScavengerHuntText = "You know you’re broke,
+here’s your last frozen pizza-for-one."

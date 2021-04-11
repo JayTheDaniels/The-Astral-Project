@@ -47,16 +47,16 @@ func set_scavengerHuntStage(value: int) -> void:
 
 func bedroom():
 	if scavengerHuntStage == 1:
-		var bookshelf = get_tree().get_root().get_node("/root/Level_Base/AstralBookshelf")
+		var bookshelf = get_tree().get_root().get_node("/root/AstralBedroom/AstralBookshelf")
 		bookshelf.InteractText = bookshelf.ScavengerHuntText
 	if scavengerHuntStage == 2:
-		var couch = get_tree().get_root().get_node("/root/Level_Base/AstralCouch")
+		var couch = get_tree().get_root().get_node("/root/AstralBedroom/AstralCouch")
 		couch.InteractText = couch.ScavengerHuntText
 	if scavengerHuntStage == 3:
-		var bed = get_tree().get_root().get_node("/root/Level_Base/AstralBed")
+		var bed = get_tree().get_root().get_node("/root/AstralBedroom/AstralBed")
 		bed.InteractText = bed.ScavengerHuntText
 	if scavengerHuntStage == 4:
-		var tv = get_tree().get_root().get_node("/root/Level_Base/AstralTV")
+		var tv = get_tree().get_root().get_node("/root/AstralBedroom/AstralTV")
 		tv.InteractText = tv.ScavengerHuntText
 	else:
 		print("Scavenger error")
@@ -65,25 +65,48 @@ func bathroom():
 	pass
 
 func office():
-	var todo = get_tree().get_root().get_node("/root/Level_Base/TodoList")
+	var todo = get_tree().get_root().get_node("/root/Office/TodoList")
 	if scavengerHuntStage == 2:
-		var plant = get_tree().get_root().get_node("/root/Level_Base/HousePlant")
+		var plant = get_tree().get_root().get_node("/root/Office/HousePlant")
 		plant.InteractText = plant.ScavengerHuntText
 	if scavengerHuntStage == 3:
-		var desk = get_tree().get_root().get_node("/root/Level_Base/Desk")
-		desk.InteractText = desk.ScavengerHuntText		
+		var desk = get_tree().get_root().get_node("/root/Office/Desk")
+		desk.InteractText = desk.ScavengerHuntText
 	if scavengerHuntStage == 4:
-		#var tv = get_tree().get_root().get_node("/root/Level_Base/AstralTV")
-		#create a new script for todo list that inherets from base object
 		todo.InteractText = todo.ScavengerHuntText
 	if scavengerHuntStage == 5:
-		get_tree().get_root().get_node("/root/Level_Base/Mirror").set_script(portal)
+		get_tree().get_root().get_node("/root/Office/Mirror").set_script(portal)
+	if scavengerHuntStage == 6:
+		var desk = get_tree().get_root().get_node("/root/AstralOffice/Desk")
+		desk.InteractText = desk.ScavengerHuntText
+	if scavengerHuntStage == 7:
+		get_tree().get_root().get_node("/root/AstralOffice/Mirror").set_script(portal)
 
 func living_room():
 	pass
 
 func kitchen():
-	pass
+	if scavengerHuntStage == 1:
+		var fridge = get_tree().get_root().get_node("/root/Kitchen/Fridge")
+		fridge.InteractText = fridge.ScavengerHuntText
+	if scavengerHuntStage == 2:
+		var microwave = get_tree().get_root().get_node("/root/Kitchen/Microwave")
+		microwave.InteractText = microwave.ScavengerHuntText
+		#insert timer here...
+		get_tree().get_root().get_node("/root/Kitchen/Microwave").set_script(portal)
+	if scavengerHuntStage == 3:
+		var sink = get_tree().get_root().get_node("/root/AstralKitchen/Sink")
+		sink.InteractText = sink.ScavengerHuntText
+	if scavengerHuntStage == 4:
+		var stove = get_tree().get_root().get_node("/root/AstralKitchen/Stove")
+		stove.InteractText = stove.ScavengerHuntText
+	if scavengerHuntStage == 5:
+		var fridge = get_tree().get_root().get_node("/root/AstralKitchen/Fridge")
+		fridge.InteractText = fridge.ScavengerHuntText
+	if scavengerHuntStage == 6:
+		var stove = get_tree().get_root().get_node("/root/AstralKitchen/Stove")
+		stove.InteractText = "We have all the time in the world here. \n Let’s cook some of those thoughts!"
+
 
 func hallway():
 	pass

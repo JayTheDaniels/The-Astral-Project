@@ -6,7 +6,7 @@
 [ext_resource path="res://Src/Game Objects/Leela.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Src/Game Objects/Base_Object.tscn" type="PackedScene" id=5]
 
-[node name="Level_Base" type="YSort" groups=[
+[node name="AstralOffice" type="YSort" groups=[
 "Astral",
 ]]
 
@@ -42,7 +42,8 @@ margin_right = 1.0
 position = Vector2( 94, 80 )
 InteractText = "Always more work than
 there is time to do it in."
-ScavengerHuntText = "(placeholder)"
+ScavengerHuntText = "(placeholder) Congrats, you did it!
+Leave using the mirror."
 
 [node name="Mirror" parent="." instance=ExtResource( 5 )]
 position = Vector2( 48, 64 )
@@ -50,4 +51,4 @@ InteractText = "It's me! Oh no..."
 
 [node name="Leela" parent="." instance=ExtResource( 4 )]
 position = Vector2( 32, 80 )
-interaction_room = 2
+interaction_room = 3

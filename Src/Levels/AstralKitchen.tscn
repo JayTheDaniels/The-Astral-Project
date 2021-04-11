@@ -6,7 +6,7 @@
 [ext_resource path="res://Src/Game Objects/Leela.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Src/Game Objects/Base_Object.tscn" type="PackedScene" id=5]
 
-[node name="Level_Base" type="YSort" groups=[
+[node name="AstralKitchen" type="YSort" groups=[
 "Astral",
 ]]
 
@@ -27,7 +27,8 @@ margin_right = 1.0
 
 [node name="Stove" parent="." instance=ExtResource( 5 )]
 position = Vector2( 29.174, 61.4436 )
-InteractText = "Egg for these trying times."
+InteractText = "Maybe I should freshen up first."
+ScavengerHuntText = "I should choose a thought to place over the stove."
 
 [node name="Microwave" parent="." instance=ExtResource( 5 )]
 position = Vector2( 68.7719, 55.7868 )
@@ -36,13 +37,18 @@ InteractText = "No kitchen is complete without radiation."
 [node name="Sink" parent="." instance=ExtResource( 5 )]
 position = Vector2( 148.321, 53.6654 )
 InteractText = "Water is life."
+ScavengerHuntText = "You wash away your germs and troubles.
+Now you can start cooking your thoughts."
 
 [node name="Fridge" parent="." instance=ExtResource( 5 )]
 position = Vector2( 109.784, 54.019 )
 InteractText = "It's mostly filled with eggs."
+ScavengerHuntText = "You grab your freshest thoughts.
+\"I'm broke\", \"Can I redo life?\", \"Where is my phone?\""
 
 [node name="Leela" parent="." instance=ExtResource( 4 )]
-position = Vector2( 48, 56 )
+position = Vector2( 128, 120 )
+interaction_room = 5
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = -240.0

@@ -6,7 +6,7 @@
 [ext_resource path="res://Src/UI/UI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Src/Game Objects/Base_Object.tscn" type="PackedScene" id=5]
 
-[node name="Level_Base" type="YSort"]
+[node name="Bathroom" type="YSort"]
 
 [node name="BathroomBackground" type="TextureRect" parent="."]
 margin_left = -200.0

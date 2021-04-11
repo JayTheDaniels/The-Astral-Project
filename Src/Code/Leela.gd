@@ -38,17 +38,17 @@ func follow():
 
 
 func dialogue():
-	if interaction_room == 0:
-		bedroom()
 	if interaction_room == 1:
-		bathroom()
+		bedroom()
 	if interaction_room == 2:
-		office()
+		bathroom()
 	if interaction_room == 3:
-		living_room()
+		office()
 	if interaction_room == 4:
-		kitchen()
+		living_room()
 	if interaction_room == 5:
+		kitchen()
+	if interaction_room == 6:
 		hallway()
 		
 
@@ -78,7 +78,7 @@ func bedroom():
 			dialogue.open(self.get_path())
 			get_parent().get_node("UI/CanvasLayer/Lives").show()
 			# use this code for setting the return object
-			get_tree().get_root().get_node("/root/Astral_Level_Base/AstralBed").set_script(portal)
+			get_tree().get_root().get_node("/root/AstralBedroom/AstralBed").set_script(portal)
 		else:
 			dialogueTotal = 1
 			dialogue.dialogue = "Take your time human, there's no such thing here."
@@ -89,25 +89,41 @@ func bathroom():
 
 func office():
 	var interaction_Counter = 0
-	dialogueTotal = 1
+	dialogueTotal = 2
 	if dialogueCounter == 0:
 		dialogue.dialogue = "Friend! Hello again... I have a new gift for you. \n A new puzzle to go with it."
 		dialogue.open(self.get_path())
-		interaction_Counter+= 1
-	if interaction_Counter == 1:
-		dialogueTotal = 2
-		if dialogueCounter == 1:
-			dialogue.dialogue = "Communicate with family, \n research, shop, and play games."
-			dialogue.open(self.get_path())
-		if dialogueCounter == 2:
-			dialogue.dialogue = "Since this invention swept your world, \n Human life has greatly changed."
+		Global.scavengerHuntStage = 6
+	if dialogueCounter == 1:
+		dialogue.dialogue = "Communicate with family, \n research, shop, and play games."
+		dialogue.open(self.get_path())
+	if dialogueCounter == 2:
+		dialogue.dialogue = "Since this invention swept your world, \n Human life has greatly changed."
+		dialogue.open(self.get_path())
+		interaction_Counter = 1
+
 
 
 func living_room():
 	pass
 
 func kitchen():
-	pass
+	var interaction_Counter = 0
+	dialogueTotal = 1
+	if dialogueCounter == 0:
+		dialogue.dialogue = "You made it! Some sassy comebacks from the kitchen. \n Although, it is YOUR kitchen…"
+		dialogue.open(self.get_path())
+		Global.scavengerHuntStage = 3
+		interaction_Counter = 1
+	if dialogueCounter == 1:
+		dialogue.dialogue = "What kind of thoughts have you been cooking up??"
+		dialogue.open(self.get_path())
+	if Global.scavengerHuntStage == 7:
+		dialogue.dialogue = "You don’t have to be so hard on yourself you know. \n You did well. Fire up those radiations and let’s head back!"
+		dialogue.open(self.get_path())
+		#add Leela counter
+		get_tree().get_root().get_node("/root/AstralKitchen/Microwave").set_script(portal)
 
+		
 func hallway():
 	pass
