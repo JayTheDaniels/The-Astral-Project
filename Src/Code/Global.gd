@@ -2,21 +2,22 @@ extends Node
 
 #top level code for tracking data across levels
 
-signal lives_updated
+signal puzzle_progress
 signal scavengerHuntUpdated
 
 var scavengerHuntLevel = 0 setget set_scavengerHuntLevel
 var scavengerHuntStage = 0 setget set_scavengerHuntStage
-var total_lives = 9
-var remaining_lives = 9 setget set_lives, get_lives
+var total_puzzles = 3
+var completed_puzzles = 0 setget set_puzzles, get_puzzles
 const portal = preload("res://Src/Code/Portal.gd")
+var scavengerHunt = true
 
-func set_lives(value: int) -> void:
-	remaining_lives = value
-	emit_signal("lives_updated")
+func set_puzzles(value: int) -> void:
+	completed_puzzles = value
+	emit_signal("puzzle_progress")
 
-func get_lives() -> int:
-	return remaining_lives
+func get_puzzles() -> int:
+	return completed_puzzles
 
 var player_initial_map_position = Vector2(48, 144)
 
@@ -66,32 +67,33 @@ func bathroom():
 
 func office():
 	var todo = get_tree().get_root().get_node("/root/Office/TodoList")
-	if scavengerHuntStage == 2:
+	if scavengerHuntStage == 1:
 		var plant = get_tree().get_root().get_node("/root/Office/HousePlant")
 		plant.InteractText = plant.ScavengerHuntText
-	if scavengerHuntStage == 3:
+	if scavengerHuntStage == 2:
 		var desk = get_tree().get_root().get_node("/root/Office/Desk")
 		desk.InteractText = desk.ScavengerHuntText
-	if scavengerHuntStage == 4:
+	if scavengerHuntStage == 3:
 		todo.InteractText = todo.ScavengerHuntText
-	if scavengerHuntStage == 5:
+	if scavengerHuntStage == 4:
 		get_tree().get_root().get_node("/root/Office/Mirror").set_script(portal)
-	if scavengerHuntStage == 6:
+	if scavengerHuntStage == 5:
 		var desk = get_tree().get_root().get_node("/root/AstralOffice/Desk")
 		desk.InteractText = desk.ScavengerHuntText
-	if scavengerHuntStage == 7:
-		get_tree().get_root().get_node("/root/AstralOffice/Mirror").set_script(portal)
+
 
 func living_room():
 	pass
 
 func kitchen():
 	if scavengerHuntStage == 1:
+		var microwave = get_tree().get_root().get_node("/root/Kitchen/Microwave")
+		microwave.InteractText = microwave.ScavengerHuntText
 		var fridge = get_tree().get_root().get_node("/root/Kitchen/Fridge")
 		fridge.InteractText = fridge.ScavengerHuntText
 	if scavengerHuntStage == 2:
 		var microwave = get_tree().get_root().get_node("/root/Kitchen/Microwave")
-		microwave.InteractText = microwave.ScavengerHuntText
+		microwave.InteractText = "Off you go! Just be prepared to come back \n to a very cold pizza."
 		#insert timer here...
 		get_tree().get_root().get_node("/root/Kitchen/Microwave").set_script(portal)
 	if scavengerHuntStage == 3:
@@ -106,6 +108,7 @@ func kitchen():
 	if scavengerHuntStage == 6:
 		var stove = get_tree().get_root().get_node("/root/AstralKitchen/Stove")
 		stove.InteractText = "We have all the time in the world here. \n Let’s cook some of those thoughts!"
+		#insert timer here
 
 
 func hallway():

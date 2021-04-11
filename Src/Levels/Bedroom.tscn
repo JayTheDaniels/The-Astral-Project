@@ -5,7 +5,7 @@
 [ext_resource path="res://Src/UI/UI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Src/Game Objects/Door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Src/Game Objects/Base_Object.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Src/Code/Portal.gd" type="Script" id=6]
+[ext_resource path="res://Src/Code/TV.gd" type="Script" id=6]
 
 [node name="Bedroom" type="YSort" groups=[
 "Normal",
@@ -48,7 +48,8 @@ player_spawn_location = Vector2( 248, 96 )
 
 [node name="Bed" parent="." instance=ExtResource( 5 )]
 position = Vector2( 29.7784, 68.553 )
-script = ExtResource( 6 )
+InteractText = "Home of dreamless sleep and sleepless dreams alike."
+ScavengerHuntText = "What's happening?"
 
 [node name="Couch" parent="." instance=ExtResource( 5 )]
 position = Vector2( 96, 128 )
@@ -58,7 +59,7 @@ InteractText = "Feels like most of my time is spent sitting here."
 [node name="Television" parent="." instance=ExtResource( 5 )]
 position = Vector2( 121.806, 112.37 )
 scale = Vector2( 0.960005, 1.16 )
-InteractText = "Nothing intereseting on."
+script = ExtResource( 6 )
 
 [node name="Dresser" parent="." instance=ExtResource( 5 )]
 position = Vector2( 90.4223, 56.0466 )

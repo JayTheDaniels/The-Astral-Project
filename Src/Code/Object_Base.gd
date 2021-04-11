@@ -14,6 +14,7 @@ export var startpoint = false
 onready var dialogue = get_parent().get_node("UI/CanvasLayer/PopupDialog")
 var dialogueCounter = 0
 var dialogueTotal = 0
+var interaction_Counter = 0
 
 
 func interaction():
@@ -21,16 +22,24 @@ func interaction():
 	print ("Dialogue Count: ", dialogueCounter)
 	dialogue.dialogue = InteractText
 	dialogue.open(self.get_path())
-	if startpoint == true:
-		get_start()
-	else:
-		scavengerHunt()
+	if Global.scavengerHunt == true:
+		if startpoint == true:
+			get_start()
+		else:
+			scavengerHunt()
 	#get_parent().get_node("UI/CanvasLayer/Lives").show()
 
 func get_start():
+	if self.name == "TodoList":
+		if Global.scavengerHuntLevel != 3:
+			Global.scavengerHuntLevel = 3
+			Global.scavengerHuntStage = 1
+		if Global.scavengerHuntStage == 3:
+			office_object()
 	if self.name == "Microwave":
-		Global.scavengerHuntLevel = 5
-		Global.scavengerHuntStage = 1
+		if Global.scavengerHuntLevel != 5:
+			Global.scavengerHuntLevel = 5
+			Global.scavengerHuntStage = 1
 
 func scavengerHunt():
 	if Global.scavengerHuntLevel == 1:
@@ -69,25 +78,21 @@ func bathroom_object():
 
 func office_object():
 	if Global.scavengerHuntStage == 1:
-		if self.name == "TodoList":
+		if self.name == "HousePlant":
 			print ("Objective Updated!")
 			Global.scavengerHuntStage = 2
 	if Global.scavengerHuntStage == 2:
-		if self.name == "HousePlant":
+		if self.name == "Desk":
 			print ("Objective Updated!")
 			Global.scavengerHuntStage = 3
 	if Global.scavengerHuntStage == 3:
-		if self.name == "Desk":
-			print ("Objective Updated!")
-			Global.scavengerHuntStage = 4
-	if Global.scavengerHuntStage == 4:
 		if self.name == "TodoList":
 			print ("Objective Updated!")
-			Global.scavengerHuntStage = 5
-	if Global.scavengerHuntStage == 6:
+			Global.scavengerHuntStage = 4
+	if Global.scavengerHuntStage == 5:
 		if self.name == "Desk":
 			print ("Objective Updated!")
-			Global.scavengerHuntStage = 7
+			Global.scavengerHuntStage = 6
 
 func living_room_object():
 	pass

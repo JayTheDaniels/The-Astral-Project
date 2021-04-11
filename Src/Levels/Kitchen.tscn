@@ -45,8 +45,8 @@ InteractText = "Egg for these trying times."
 
 [node name="Microwave" parent="." instance=ExtResource( 5 )]
 position = Vector2( 68.7719, 55.7868 )
-InteractText = "Find me food first, gosh."
-ScavengerHuntText = "Off you go!"
+InteractText = "No home is complete without a little radiation."
+ScavengerHuntText = "Find me food first, gosh."
 startpoint = true
 
 [node name="Sink" parent="." instance=ExtResource( 5 )]

@@ -67,6 +67,7 @@ func bedroom():
 	if dialogueCounter == 3:
 		dialogue.dialogue = "Let's make a game of it! Beside me is your book shelf. \n Your first clue waits for you there."
 		dialogue.open(self.get_path())
+		Global.scavengerHunt = true
 		Global.scavengerHuntLevel = 1
 		Global.scavengerHuntStage = 1
 	if dialogueCounter == 4:
@@ -78,6 +79,7 @@ func bedroom():
 			dialogue.open(self.get_path())
 			get_parent().get_node("UI/CanvasLayer/Lives").show()
 			# use this code for setting the return object
+			Global.completed_puzzles += 1
 			get_tree().get_root().get_node("/root/AstralBedroom/AstralBed").set_script(portal)
 		else:
 			dialogueTotal = 1
@@ -93,7 +95,7 @@ func office():
 	if dialogueCounter == 0:
 		dialogue.dialogue = "Friend! Hello again... I have a new gift for you. \n A new puzzle to go with it."
 		dialogue.open(self.get_path())
-		Global.scavengerHuntStage = 6
+		Global.scavengerHuntStage = 5
 	if dialogueCounter == 1:
 		dialogue.dialogue = "Communicate with family, \n research, shop, and play games."
 		dialogue.open(self.get_path())
@@ -101,6 +103,19 @@ func office():
 		dialogue.dialogue = "Since this invention swept your world, \n Human life has greatly changed."
 		dialogue.open(self.get_path())
 		interaction_Counter = 1
+	if interaction_Counter == 1:
+		if Global.scavengerHuntStage == 6:
+			dialogue.dialogue = "You're getting better at this human. \n The mirror will take you home now."
+			Global.completed_puzzles += 1
+			get_tree().get_root().get_node("/root/AstralOffice/Mirror").set_script(portal)
+		else:
+			dialogueTotal = 1
+			if dialogueCounter == 1:
+				dialogue.dialogue = "Communicate with family, \n research, shop, and play games."
+				dialogue.open(self.get_path())
+			if dialogueCounter == 2:
+				dialogue.dialogue = "Since this invention swept your world, \n Human life has greatly changed."
+				dialogue.open(self.get_path())
 
 
 
@@ -121,7 +136,7 @@ func kitchen():
 	if Global.scavengerHuntStage == 7:
 		dialogue.dialogue = "You don’t have to be so hard on yourself you know. \n You did well. Fire up those radiations and let’s head back!"
 		dialogue.open(self.get_path())
-		#add Leela counter
+		Global.completed_puzzles += 1
 		get_tree().get_root().get_node("/root/AstralKitchen/Microwave").set_script(portal)
 
 		

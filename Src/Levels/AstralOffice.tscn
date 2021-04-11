@@ -43,7 +43,7 @@ position = Vector2( 94, 80 )
 InteractText = "Always more work than
 there is time to do it in."
 ScavengerHuntText = "(placeholder) Congrats, you did it!
-Leave using the mirror."
+Return to Leela."
 
 [node name="Mirror" parent="." instance=ExtResource( 5 )]
 position = Vector2( 48, 64 )

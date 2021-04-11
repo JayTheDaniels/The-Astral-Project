@@ -22,7 +22,6 @@ __meta__ = {
 }
 
 [node name="Lives" type="Label" parent="CanvasLayer"]
-visible = false
 margin_right = 112.0
 margin_bottom = 14.0
 theme = ExtResource( 6 )
