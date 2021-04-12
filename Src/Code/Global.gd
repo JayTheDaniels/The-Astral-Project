@@ -63,7 +63,26 @@ func bedroom():
 		print("Scavenger error")
 
 func bathroom():
-	pass
+	if scavengerHuntStage == 1:
+		var bathtub = get_tree().get_root().get_node("/root/Bathroom/Bathtub")
+		bathtub.InteractText = bathtub.ScavengerHuntText
+	if scavengerHuntStage == 2:
+		var towels = get_tree().get_root().get_node("/root/Bathroom/Towels")
+		towels.InteractText = towels.ScavengerHuntText
+	if scavengerHuntStage == 3:
+		get_tree().get_root().get_node("/root/Bathroom/Bathtub").set_script(portal)
+	if scavengerHuntStage == 4:
+		var toilet = get_tree().get_root().get_node("/root/AstralBathroom/Toilet")
+		toilet.InteractText = toilet.ScavengerHuntText
+	if scavengerHuntStage == 5:
+		var toiletpaper = get_tree().get_root().get_node("/root/AstralBathroom/ToiletPaper")
+		toiletpaper.InteractText = toiletpaper.ScavengerHuntText
+	if scavengerHuntStage == 6:
+		var toilet = get_tree().get_root().get_node("/root/AstralBathroom/Toilet")
+		toilet.InteractText = "You flush away all of your problems. You feel like \n a great weight has been lifted. You should wash your hands."
+	if scavengerHuntStage == 7:
+		var sink = get_tree().get_root().get_node("/root/AstralBathroom/Sink")
+		sink.InteractText = sink.ScavengerHuntText
 
 func office():
 	var todo = get_tree().get_root().get_node("/root/Office/TodoList")

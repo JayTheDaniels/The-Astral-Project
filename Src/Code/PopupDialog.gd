@@ -3,6 +3,10 @@ extends PopupDialog
 var dialogue setget dialogue_set
 var interactor
 var open = false
+var choice = false setget choice_set
+
+func choice_set(switch):
+	choice = switch
 
 func dialogue_set(text):
 	dialogue = text
@@ -33,3 +37,11 @@ func _input(event):
 			next()
 		else:
 			pass
+	#if choice == true:
+	#	if Input.is_action_just_pressed("choice X"):
+	#		interactor.choice = "X"
+	#		next()
+	#	if Input.is_action_just_pressed("choice C"):
+	#		interactor.choice = "C"
+	#		next()
+

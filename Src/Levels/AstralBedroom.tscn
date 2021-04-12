@@ -50,6 +50,10 @@ ScavengerHuntText = "Poor lost, wandering soul. Sometimes sitting
 
 [node name="AstralBed" parent="." instance=ExtResource( 5 )]
 position = Vector2( 31.8877, 59.3206 )
+InteractText = "How do you get astral residue out
+of fabric?"
+ScavengerHuntText = "Your body still and your mind wanders.
+You crave sensation."
 
 [node name="AstralCouch" parent="." instance=ExtResource( 5 )]
 position = Vector2( 94.6994, 127.132 )

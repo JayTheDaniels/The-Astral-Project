@@ -15,6 +15,7 @@ onready var dialogue = get_parent().get_node("UI/CanvasLayer/PopupDialog")
 var dialogueCounter = 0
 var dialogueTotal = 0
 var interaction_Counter = 0
+var choice = ""
 
 
 func interaction():
@@ -35,11 +36,22 @@ func get_start():
 			Global.scavengerHuntLevel = 3
 			Global.scavengerHuntStage = 1
 		if Global.scavengerHuntStage == 3:
-			office_object()
+			scavengerHunt()
 	if self.name == "Microwave":
 		if Global.scavengerHuntLevel != 5:
 			Global.scavengerHuntLevel = 5
 			Global.scavengerHuntStage = 1
+		if Global.scavengerHuntLevel == 5:
+			scavengerHunt()
+	if self.name == "Bathtub":
+		if Global.scavengerHuntLevel != 2:
+			dialogueTotal = 1
+			self.InteractText = self.ScavengerHuntText
+			Global.scavengerHuntLevel = 2
+			Global.scavengerHuntStage = 1
+		if Global.scavengerHuntLevel == 2:
+			scavengerHunt()
+		
 
 func scavengerHunt():
 	if Global.scavengerHuntLevel == 1:
@@ -74,7 +86,30 @@ func bedroom_object():
 			Global.scavengerHuntStage = 5
 
 func bathroom_object():
-	pass
+	if Global.scavengerHuntStage == 1:
+		if self.name == "Bathtub":
+			print("Objective Updated!")
+			Global.scavengerHuntStage = 2
+	if Global.scavengerHuntStage == 2:
+		if self.name == "Towels":
+			print ("Objective Updated!")
+			Global.scavengerHuntStage = 3
+	if Global.scavengerHuntStage == 4:
+		if self.name == "Toilet":
+			print("Objective Updated!")
+			Global.scavengerHuntStage = 5
+	if Global.scavengerHuntStage == 5:
+		if self.name == "ToiletPaper":
+			print("Objective Updated!")
+			Global.scavengerHuntStage = 6
+	if Global.scavengerHuntStage == 6:
+		if self.name == "Toilet":
+			print("Objective Updated!")
+			Global.scavengerHuntStage = 7
+	if Global.scavengerHuntStage == 7:
+		if self.name == "Sink":
+			print("Objective Updated!")
+			Global.scavengerHuntStage = 8
 
 func office_object():
 	if Global.scavengerHuntStage == 1:
@@ -118,8 +153,6 @@ func kitchen_object():
 		if self.name == "Stove":
 			print("Objective Updated!")
 			Global.scavengerHuntStage = 7
-
-
 
 
 func hallway_object():

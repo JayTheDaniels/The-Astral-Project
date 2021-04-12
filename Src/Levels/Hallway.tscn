@@ -39,12 +39,12 @@ next_scene_path = "res://Src/Levels/LivingRoom.tscn"
 player_spawn_location = Vector2( 240, 128 )
 
 [node name="Door2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 104, 64 )
+position = Vector2( 104, 56 )
 next_scene_path = "res://Src/Levels/Office.tscn"
 player_spawn_location = Vector2( 80, 128 )
 
 [node name="Door3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 248, 64 )
+position = Vector2( 248, 56 )
 next_scene_path = "res://Src/Levels/Bedroom.tscn"
 player_spawn_location = Vector2( 48, 144 )
 

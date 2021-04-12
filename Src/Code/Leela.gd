@@ -87,7 +87,34 @@ func bedroom():
 			dialogue.open(self.get_path())
 
 func bathroom():
-	pass
+	var interaction_Counter = 0
+	dialogueTotal = 4
+	if dialogueCounter == 0:
+		dialogue.dialogue = "Scrubba dub dub. Astral Cat in your tub. \n Welcome back human, thanks for the warm bath."
+		dialogue.open(self.get_path())
+	if dialogueCounter == 1:
+		dialogue.dialogue = "For this puzzle, let's cleanse you of your \n negative thoughts. Good thing we're in a bathroom."
+		dialogue.open(self.get_path())
+	if dialogueCounter == 2:
+		dialogue.dialogue = "Just do what you would normally do, \n the Astral World will handle the rest."
+		dialogue.open(self.get_path())
+		Global.scavengerHuntStage = 4
+	if dialogueCounter == 3:
+		dialogue.dialogue = "Take your time human, there's no such thing here."
+		dialogue.open(self.get_path())
+		interaction_Counter = 1
+	if interaction_Counter == 1:
+		if Global.scavengerHuntStage == 8:
+			dialogue.dialogue = "You continue to impress, human. When you're ready \n to leave, flush yourself out of this world."
+			dialogue.open(self.get_path())
+			get_parent().get_node("UI/CanvasLayer/Lives").show()
+			# use this code for setting the return object
+			Global.completed_puzzles += 1
+			get_tree().get_root().get_node("/root/AstralBathroom/Toilet").set_script(portal)
+		else:
+			dialogueTotal = 1
+			dialogue.dialogue = "Take your time human, there's no such thing here."
+			dialogue.open(self.get_path())
 
 func office():
 	var interaction_Counter = 0
