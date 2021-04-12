@@ -10,6 +10,14 @@
 "Normal",
 ]]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 344.0
+margin_bottom = 208.0
+color = Color( 0.188235, 0.172549, 0.180392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="OfficeBackground" type="TextureRect" parent="."]
 margin_left = -40.0
 margin_top = 16.0

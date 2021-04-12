@@ -9,6 +9,7 @@
 [node name="AstralBathroom" type="YSort" groups=[
 "Astral",
 ]]
+position = Vector2( -8, 0 )
 
 [node name="AstralBathroomBackground" type="TextureRect" parent="."]
 margin_left = -200.0
@@ -67,3 +68,13 @@ InteractText = "The water here is all purple.
 Is this healthy?"
 ScavengerHuntText = "You feel cleansed of all that once concerned you.
 It might not last, but for now you feel refreshed."
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 264.0
+margin_top = -24.0
+margin_right = 360.0
+margin_bottom = 240.0
+color = Color( 0.27451, 0.25098, 0.262745, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

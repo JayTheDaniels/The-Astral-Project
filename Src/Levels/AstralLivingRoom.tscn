@@ -65,3 +65,23 @@ InteractText = "Smells nice."
 
 [node name="Leela" parent="." instance=ExtResource( 4 )]
 position = Vector2( 56, 112 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 232.0
+margin_top = -16.0
+margin_right = 392.0
+margin_bottom = 64.0
+color = Color( 0.188235, 0.172549, 0.180392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 224.0
+margin_top = -16.0
+margin_right = 248.0
+margin_bottom = 40.0
+color = Color( 0.188235, 0.172549, 0.180392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

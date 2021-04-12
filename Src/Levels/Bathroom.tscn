@@ -36,7 +36,7 @@ polygon = PoolVector2Array( 24, 48, 48, 48, 72, 48, 128, 48, 128, 88, 160, 88, 2
 [node name="Door" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, 144 )
 next_scene_path = "res://Src/Levels/Bedroom.tscn"
-player_spawn_location = Vector2( 160, 112 )
+player_spawn_location = Vector2( 160, 136 )
 
 [node name="Towels" parent="." instance=ExtResource( 5 )]
 position = Vector2( 160, 88 )
@@ -70,3 +70,13 @@ in warm water. "
 ScavengerHuntText = "Maybe a quick bath will help clear my mind.
 I should grab a towel."
 startpoint = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 264.0
+margin_top = -16.0
+margin_right = 344.0
+margin_bottom = 248.0
+color = Color( 0.188235, 0.172549, 0.180392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

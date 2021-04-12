@@ -10,6 +10,36 @@
 "Astral",
 ]]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 200.0
+margin_top = -48.0
+margin_right = 344.0
+margin_bottom = 240.0
+color = Color( 0.188235, 0.172549, 0.180392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 8.0
+margin_top = 168.0
+margin_right = 112.0
+margin_bottom = 216.0
+color = Color( 0.188235, 0.172549, 0.180392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = -16.0
+margin_top = 144.0
+margin_right = 16.0
+margin_bottom = 216.0
+color = Color( 0.188235, 0.172549, 0.180392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 40, 128 )
 

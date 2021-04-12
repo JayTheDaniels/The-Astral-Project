@@ -8,6 +8,16 @@
 
 [node name="Kitchen" type="YSort"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 168.0
+margin_top = -40.0
+margin_right = 344.0
+margin_bottom = 216.0
+color = Color( 0.188235, 0.172549, 0.180392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="LivingRoomBackground" type="TextureRect" parent="."]
 margin_left = -248.0
 margin_top = -56.0

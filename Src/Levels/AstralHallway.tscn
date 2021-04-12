@@ -7,6 +7,16 @@
 
 [node name="AstralHall" type="YSort"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -32.0
+margin_top = -8.0
+margin_right = 376.0
+margin_bottom = 24.0
+color = Color( 0.27451, 0.25098, 0.262745, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="AstralHallwayBackground" type="TextureRect" parent="."]
 margin_left = -32.0
 margin_top = 16.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Assets/bedroom3_realworld.png" type="Texture" id=1]
+[ext_resource path="res://Assets/BedroomBathroom.png" type="Texture" id=1]
 [ext_resource path="res://Src/Game Objects/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Src/UI/UI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Src/Game Objects/Door.tscn" type="PackedScene" id=4]
@@ -13,9 +13,9 @@
 
 [node name="BedroomBackground" type="TextureRect" parent="."]
 margin_left = -32.0
-margin_top = -16.0
-margin_right = 1504.0
-margin_bottom = 1392.0
+margin_top = -24.0
+margin_right = 2912.0
+margin_bottom = 1640.0
 rect_scale = Vector2( 0.16, 0.16 )
 texture = ExtResource( 1 )
 __meta__ = {
@@ -23,14 +23,14 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 160, 112 )
+position = Vector2( 160, 136 )
 
 [node name="UI" parent="." instance=ExtResource( 3 )]
 margin_left = 1.0
 margin_right = 1.0
 
 [node name="Door2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 208, 112 )
+position = Vector2( 208, 136 )
 next_scene_path = "res://Src/Levels/Bathroom.tscn"
 player_spawn_location = Vector2( 56, 144 )
 
@@ -39,32 +39,32 @@ player_spawn_location = Vector2( 56, 144 )
 ]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BedroomWallCollision"]
-polygon = PoolVector2Array( 8, 168, 32, 168, 32, 200, 64, 200, 64, 168, 136, 168, 152.337, 168, 176, 168, 176, 136, 200, 136, 200, 88, 176, 88, 176, 48, 104, 48, 72, 48, 40, 48, 24, 48, 8, 48, 0, -16, 216, -16, 216, 208, -32, 208, -32, -16, 0, -16, 0, -16, 8, 48 )
+polygon = PoolVector2Array( 8, 184, 32, 184, 32, 200, 64, 200, 64, 184, 136, 184, 152, 184, 176, 184, 176, 160, 200, 160, 200, 104, 176, 104, 176, 40, 104, 40, 72, 40, 40, 48, 24, 48, 8, 40, 0, -16, 216, -16, 216, 208, -32, 208, -32, -16, 0, -16, 0, -16, 8, 48 )
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
-position = Vector2( 48, 200 )
+position = Vector2( 48, 208 )
 next_scene_path = "res://Src/Levels/Hallway.tscn"
 player_spawn_location = Vector2( 248, 96 )
 
 [node name="Bed" parent="." instance=ExtResource( 5 )]
-position = Vector2( 29.7784, 68.553 )
+position = Vector2( 32, 72 )
 InteractText = "Home of dreamless sleep and sleepless dreams alike."
 ScavengerHuntText = "What's happening?"
 
 [node name="Couch" parent="." instance=ExtResource( 5 )]
-position = Vector2( 96, 128 )
+position = Vector2( 112, 168 )
 scale = Vector2( 0.720001, 1 )
 InteractText = "Feels like most of my time is spent sitting here."
 
 [node name="Television" parent="." instance=ExtResource( 5 )]
-position = Vector2( 121.806, 112.37 )
+position = Vector2( 112, 104 )
 scale = Vector2( 0.960005, 1.16 )
 script = ExtResource( 6 )
 
 [node name="Dresser" parent="." instance=ExtResource( 5 )]
-position = Vector2( 90.4223, 56.0466 )
+position = Vector2( 96, 56 )
 InteractText = "I only own purple hoodies."
 
 [node name="Books" parent="." instance=ExtResource( 5 )]
-position = Vector2( 121.098, 40.4727 )
+position = Vector2( 128, 40 )
 InteractText = "I'll get to reading these eventually..."
