@@ -130,7 +130,10 @@ func office_object():
 			Global.scavengerHuntStage = 6
 
 func living_room_object():
-	pass
+	if Global.scavengerHuntStage == 1:
+		if self.name == "Stool":
+			print("Objective Updated!")
+			Global.scavengerHuntStage = 2
 
 func kitchen_object():
 	if Global.scavengerHuntStage == 1:

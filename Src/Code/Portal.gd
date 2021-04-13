@@ -49,3 +49,4 @@ func change_level() -> void:
 		get_tree().change_scene(astral_hallway)
 	if curr_level == "AstralHallway":
 		get_tree().change_scene(normal_hallway)
+

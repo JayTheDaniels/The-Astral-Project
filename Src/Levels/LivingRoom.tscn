@@ -44,9 +44,12 @@ next_scene_path = "res://Src/Levels/Hallway.tscn"
 player_spawn_location = Vector2( 56, 128 )
 
 [node name="Fireplace" parent="." instance=ExtResource( 5 )]
-position = Vector2( 204.89, 66.747 )
+position = Vector2( 208, 64 )
 scale = Vector2( 2.84, 1 )
-InteractText = "Just a normal apartment fireplace."
+InteractText = "I always find myself coming back here
+to sit alone and think."
+ScavengerHuntText = "The warmth of the fire is so comforting.
+The flames are entrancing..."
 
 [node name="Flat Door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 141.662, 42.2692 )
@@ -54,21 +57,39 @@ scale = Vector2( 1.72, 1.477 )
 InteractText = "Is there even a point to going outside?"
 
 [node name="Mirror" parent="." instance=ExtResource( 5 )]
-position = Vector2( 29.876, 58.6208 )
+position = Vector2( 32, 56 )
 scale = Vector2( 0.96, 0.960001 )
 InteractText = "I don't recognize this face anymore."
 
 [node name="Table" parent="." instance=ExtResource( 5 )]
-position = Vector2( 39.6986, 122.943 )
-scale = Vector2( 2.72, 1.72 )
-InteractText = "Is it time for breakfast yet?"
+position = Vector2( 40, 120 )
+scale = Vector2( 3, 1.5 )
+InteractText = "Maybe I could use a little warmth..."
 
 [node name="Stool" parent="." instance=ExtResource( 5 )]
 position = Vector2( 183.295, 113.7 )
 scale = Vector2( 0.741, 0.3 )
 InteractText = "A seat next to an open fire."
+ScavengerHuntText = "The fire is so nice. I should get closer."
+startpoint = true
+
+[node name="Stool2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 80, 113.7 )
+scale = Vector2( 0.741, 0.3 )
+InteractText = "So many empty seats."
+
+[node name="Chair" parent="." instance=ExtResource( 5 )]
+position = Vector2( 40, 135 )
+scale = Vector2( 0.741, 0.3 )
+InteractText = "Wish I had some company."
+
+[node name="Chair2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 40, 103 )
+scale = Vector2( 0.741, 0.3 )
+InteractText = "This chair never gets used."
 
 [node name="Flowers" parent="." instance=ExtResource( 5 )]
-position = Vector2( 141.376, 155.349 )
+position = Vector2( 141.376, 153.349 )
 scale = Vector2( 2, 0.4 )
-InteractText = "Smells nice."
+InteractText = "Smells nice. At least these flowers 
+are thriving."

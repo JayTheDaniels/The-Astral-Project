@@ -32,9 +32,11 @@ func _physics_process(delta):
 func interaction():
 	print("Is interacting with " + self.name)
 	dialogue()
+	$Meow.play()
 
 func follow():
 	follow_player = true
+	
 
 
 func dialogue():
@@ -147,7 +149,26 @@ func office():
 
 
 func living_room():
-	pass
+	var interaction_Counter = 0
+	if dialogueCounter == 0:
+		dialogue.dialogue = "Welcome back to the Astral World! Not so lonely here."
+		dialogue.open(self.get_path())
+		interaction_Counter = 1
+	if dialogueCounter == 1:
+		dialogue.dialogue = "Let's warm those empty seats with a game \n of musical chairs."
+		dialogue.open(self.get_path())
+	if dialogueCounter == 2:
+		dialogue.dialogue = "Take it from the top and dance around the clock."
+		dialogue.open(self.get_path())
+		Global.scavengerHuntStage = 3
+	if interaction_Counter == 1:
+		if Global.scavengerHuntStage == 6:
+			dialogue.dialogue = "Well done! If you're burning to return home \n the flames will take you there."
+			Global.completed_puzzles += 1
+			get_tree().get_root().get_node("/root/AstralLivingRoom/Fireplace").set_script(portal)
+		else:
+			dialogue.dialogue = "My favourite games are played at the dining table. \n It's as easy as 1,2,3..."
+			dialogue.open(self.get_path())
 
 func kitchen():
 	var interaction_Counter = 0

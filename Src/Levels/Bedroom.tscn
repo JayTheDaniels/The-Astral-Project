@@ -58,7 +58,7 @@ scale = Vector2( 1.5, 1.75 )
 InteractText = "Feels like most of my time is spent sitting here."
 
 [node name="Television" parent="." instance=ExtResource( 5 )]
-position = Vector2( 112, 99 )
+position = Vector2( 112, 96 )
 scale = Vector2( 2.7, 1.2 )
 script = ExtResource( 6 )
 

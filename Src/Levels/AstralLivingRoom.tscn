@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/living room_astralworld2.png" type="Texture" id=1]
 [ext_resource path="res://Src/Game Objects/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Src/Game Objects/Leela.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Src/Game Objects/Base_Object.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Src/Sound/MusicAstralBackgroundLoop.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Src/UI/AstralTransition.tscn" type="PackedScene" id=7]
 
 [node name="AstralLivingRoom" type="YSort"]
 
@@ -37,35 +38,53 @@ margin_right = 1.0
 [node name="Fireplace" parent="." instance=ExtResource( 5 )]
 position = Vector2( 204.89, 66.747 )
 scale = Vector2( 2.84, 1 )
-InteractText = "Just a normal apartment fireplace."
+InteractText = "Do I need floo powder for this?"
+ScavengerHuntText = "Guess I'll just jump into this fire then."
 
 [node name="Flat Door" parent="." instance=ExtResource( 5 )]
-position = Vector2( 141.662, 42.2692 )
+position = Vector2( 144, 40 )
 scale = Vector2( 1.72, 1.477 )
-InteractText = "Is there even a point to going outside?"
-
-[node name="Mirror" parent="." instance=ExtResource( 5 )]
-position = Vector2( 29.876, 58.6208 )
-scale = Vector2( 0.96, 0.960001 )
-InteractText = "I don't recognize this face anymore."
+InteractText = "Definitely not getting out of here
+that way."
 
 [node name="Table" parent="." instance=ExtResource( 5 )]
-position = Vector2( 39.6986, 122.943 )
-scale = Vector2( 2.72, 1.72 )
-InteractText = "Is it time for breakfast yet?"
+position = Vector2( 39.6986, 120.943 )
+scale = Vector2( 3, 1.5 )
+script = null
 
 [node name="Stool" parent="." instance=ExtResource( 5 )]
 position = Vector2( 183.295, 113.7 )
 scale = Vector2( 0.741, 0.3 )
-InteractText = "A seat next to an open fire."
+script = null
+
+[node name="Stool2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 81, 114 )
+scale = Vector2( 0.741, 0.3 )
+InteractText = "This spot is alright too."
+ScavengerHuntText = "And around we go."
+
+[node name="Chair" parent="." instance=ExtResource( 5 )]
+position = Vector2( 40, 103 )
+scale = Vector2( 0.741, 0.3 )
+InteractText = "This seat is always my first choice."
+ScavengerHuntText = "Let's start with this spot."
+
+[node name="Chair2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 40, 142 )
+scale = Vector2( 0.741, 0.3 )
+InteractText = "This is the last place I want to sit."
+ScavengerHuntText = "Lamest game of musical chairs ever."
 
 [node name="Flowers" parent="." instance=ExtResource( 5 )]
-position = Vector2( 141.376, 155.349 )
+position = Vector2( 141.376, 153.349 )
 scale = Vector2( 2, 0.4 )
-InteractText = "Smells nice."
+InteractText = "That cat is everywhere! 
+Better see what she wants."
+ScavengerHuntText = "Not sure if this counts as a chair,
+but clearly it's already taken."
 
 [node name="Leela" parent="." instance=ExtResource( 4 )]
-position = Vector2( 56, 112 )
+position = Vector2( 183, 111 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = 232.0
@@ -88,3 +107,5 @@ __meta__ = {
 }
 
 [node name="MusicAstralBackgroundLoop" parent="." instance=ExtResource( 6 )]
+
+[node name="AstralTransition" parent="." instance=ExtResource( 7 )]

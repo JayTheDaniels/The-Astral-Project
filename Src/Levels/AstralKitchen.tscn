@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/living room_astralworld2.png" type="Texture" id=1]
 [ext_resource path="res://Src/Game Objects/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Src/Game Objects/Leela.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Src/Game Objects/Base_Object.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Src/Sound/MusicAstralBackgroundLoop.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Src/UI/AstralTransition.tscn" type="PackedScene" id=7]
 
 [node name="AstralKitchen" type="YSort" groups=[
 "Astral",
@@ -22,6 +23,7 @@ __meta__ = {
 }
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+show_behind_parent = true
 margin_left = 8.0
 margin_top = 168.0
 margin_right = 112.0
@@ -32,6 +34,7 @@ __meta__ = {
 }
 
 [node name="ColorRect3" type="ColorRect" parent="."]
+show_behind_parent = true
 margin_left = -16.0
 margin_top = 144.0
 margin_right = 16.0
@@ -41,8 +44,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+margin_left = -240.0
+margin_top = -48.0
+margin_right = 1232.0
+margin_bottom = 1168.0
+rect_scale = Vector2( 0.31, 0.31 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 40, 128 )
+position = Vector2( 88, 112 )
 
 [node name="KitchenCollision" type="StaticBody2D" parent="." groups=[
 "Walls",
@@ -50,7 +65,7 @@ position = Vector2( 40, 128 )
 position = Vector2( -216, 104 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KitchenCollision"]
-polygon = PoolVector2Array( 272, 40, 296, 40, 296, 24, 320, 24, 320, 16, 336, 16, 344, 8, 352, 8, 352, 16, 376, 16, 376, -40, 232, -40, 232, 64, 232, 72, 232, 72, 168, -136, 440, -136, 440, 112, 152, 112, 152, -136, 168, -136, 232, 72, 272, 72 )
+polygon = PoolVector2Array( 272, 40, 296, 40, 296, 24, 312, 24, 320, 16, 336, 16, 344, 8, 352, 8, 352, 16, 376, 16, 376, -40, 249.614, -40, 232, -40, 232, 56, 168, -136, 440, -136, 440, 112, 152, 112, 152, -136, 168, -136, 232, 56, 272, 56 )
 
 [node name="UI" parent="." instance=ExtResource( 3 )]
 margin_left = 1.0
@@ -81,15 +96,6 @@ ScavengerHuntText = "You grab your freshest thoughts.
 position = Vector2( 128, 120 )
 interaction_room = 5
 
-[node name="TextureRect" type="TextureRect" parent="."]
-margin_left = -240.0
-margin_top = -48.0
-margin_right = 1232.0
-margin_bottom = 1168.0
-rect_scale = Vector2( 0.31, 0.31 )
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="MusicAstralBackgroundLoop" parent="." instance=ExtResource( 6 )]
+
+[node name="AstralTransition" parent="." instance=ExtResource( 7 )]
