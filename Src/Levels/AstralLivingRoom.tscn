@@ -29,7 +29,7 @@ __meta__ = {
 polygon = PoolVector2Array( 8, 0, 8, 72, 8, 168, 272, 168, 272, 143.642, 288, 144, 288, 128.57, 288, 104, 272, 104, 272, 64, 232, 64, 232, 40, 232, 64, 224, 64, 184, 64, 176, 64, 176, 48, 112, 48, 112, 72, 8, 72, 8, -136, 440, -136, 440, 224, -32, 224, -32, -136, 8, -136 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 256, 88 )
+position = Vector2( 216, 104 )
 
 [node name="UI" parent="." instance=ExtResource( 3 )]
 margin_left = 1.0
@@ -50,11 +50,6 @@ that way."
 [node name="Table" parent="." instance=ExtResource( 5 )]
 position = Vector2( 39.6986, 120.943 )
 scale = Vector2( 3, 1.5 )
-script = null
-
-[node name="Stool" parent="." instance=ExtResource( 5 )]
-position = Vector2( 183.295, 113.7 )
-scale = Vector2( 0.741, 0.3 )
 script = null
 
 [node name="Stool2" parent="." instance=ExtResource( 5 )]

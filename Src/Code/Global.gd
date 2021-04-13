@@ -109,6 +109,19 @@ func living_room():
 		var fireplace = get_tree().get_root().get_node("/root/LivingRoom/Fireplace")
 		fireplace.InteractText = fireplace.ScavengerHuntText
 		get_tree().get_root().get_node("/root/LivingRoom/Fireplace").set_script(portal)
+	if scavengerHuntStage == 3:
+		var chair = get_tree().get_root().get_node("/root/AstralLivingRoom/Chair")
+		chair.InteractText = chair.ScavengerHuntText
+	if scavengerHuntStage == 4:
+		var stool2 = get_tree().get_root().get_node("/root/AstralLivingRoom/Stool2")
+		stool2.InteractText = stool2.ScavengerHuntText
+	if scavengerHuntStage == 5:
+		var chair2 = get_tree().get_root().get_node("/root/AstralLivingRoom/Chair2")
+		chair2.InteractText = chair2.ScavengerHuntText
+	if scavengerHuntStage == 6:
+		var fireplace = get_tree().get_root().get_node("/root/AstralLivingRoom/Fireplace")
+		fireplace.InteractText = fireplace.ScavengerHuntText
+		get_tree().get_root().get_node("/root/AstralLivingRoom/Fireplace").set_script(portal)
 
 func kitchen():
 	if scavengerHuntStage == 1:
