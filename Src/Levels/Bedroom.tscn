@@ -68,6 +68,6 @@ scale = Vector2( 1.8, 1 )
 InteractText = "I only own purple hoodies."
 
 [node name="Books" parent="." instance=ExtResource( 5 )]
-position = Vector2( 136, 32 )
+position = Vector2( 160, 56 )
 scale = Vector2( 1.3, 1.3 )
-InteractText = "I have too many mirrors."
+InteractText = "I'll get to reading these eventually..."

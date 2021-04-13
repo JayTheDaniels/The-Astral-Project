@@ -139,14 +139,20 @@ func living_room_object():
 		if self.name == "Stool":
 			print("Objective Updated!")
 			Global.scavengerHuntStage = 2
-	if Global.scavengerHuntStage == 1:
-		if self.name == "Stool":
+	if Global.scavengerHuntStage == 3:
+		if self.name == "Chair":
 			print("Objective Updated!")
-			Global.scavengerHuntStage = 2
-	if Global.scavengerHuntStage == 1:
-		if self.name == "Stool":
+			Global.scavengerHuntStage = 4
+	if Global.scavengerHuntStage == 4:
+		if self.name == "Stool2":
 			print("Objective Updated!")
-			Global.scavengerHuntStage = 2
+			Global.scavengerHuntStage = 5
+	if Global.scavengerHuntStage == 5:
+		if self.name == "Chair2":
+			print("Objective Updated!")
+			Global.scavengerHuntStage = 6
+
+
 
 func kitchen_object():
 	if Global.scavengerHuntStage == 1:

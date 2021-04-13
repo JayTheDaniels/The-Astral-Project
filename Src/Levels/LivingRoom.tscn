@@ -48,6 +48,9 @@ position = Vector2( 204.89, 66.747 )
 scale = Vector2( 2.84, 1 )
 InteractText = "I always find myself coming back here
 to sit alone and think."
+ScavengerHuntText = "The warmth of the fire is so comforting.
+
+The flames are entrancing..."
 
 [node name="Flat Door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 141.662, 42.2692 )
@@ -67,9 +70,8 @@ InteractText = "Is it time for breakfast yet?"
 [node name="Stool" parent="." instance=ExtResource( 5 )]
 position = Vector2( 183.295, 113.7 )
 scale = Vector2( 0.741, 0.3 )
-InteractText = "The fire is so nice. I should get closer."
-ScavengerHuntText = "The warmth of the fire is so comforting.
-The flames are entrancing..."
+InteractText = "A seat next to an open fire."
+ScavengerHuntText = "The fire is so nice. I should get closer."
 startpoint = true
 
 [node name="Flowers" parent="." instance=ExtResource( 5 )]

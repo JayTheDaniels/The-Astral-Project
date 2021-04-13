@@ -118,10 +118,7 @@ func living_room():
 	if scavengerHuntStage == 5:
 		var chair2 = get_tree().get_root().get_node("/root/AstralLivingRoom/Chair2")
 		chair2.InteractText = chair2.ScavengerHuntText
-	if scavengerHuntStage == 6:
-		var fireplace = get_tree().get_root().get_node("/root/AstralLivingRoom/Fireplace")
-		fireplace.InteractText = fireplace.ScavengerHuntText
-		get_tree().get_root().get_node("/root/AstralLivingRoom/Fireplace").set_script(portal)
+
 
 func kitchen():
 	if scavengerHuntStage == 1:
