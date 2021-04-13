@@ -49,7 +49,6 @@ scale = Vector2( 2.84, 1 )
 InteractText = "I always find myself coming back here
 to sit alone and think."
 ScavengerHuntText = "The warmth of the fire is so comforting.
-
 The flames are entrancing..."
 
 [node name="Flat Door" parent="." instance=ExtResource( 5 )]

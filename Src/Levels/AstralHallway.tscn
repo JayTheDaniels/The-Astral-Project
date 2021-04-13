@@ -48,7 +48,7 @@ polygon = PoolVector2Array( 88, 80, 8, 80, 8, 160, 336, 160, 336, 80, 264, 80, 2
 
 [node name="Painting" parent="." instance=ExtResource( 5 )]
 position = Vector2( 184, 87 )
-InteractText = "Mom's always watching."
+InteractText = "Hello dear... have you been taking care of yourself?"
 
 [node name="MusicAstralBackgroundLoop" parent="." instance=ExtResource( 3 )]
 

@@ -57,8 +57,7 @@ You are ready to flush them all away."
 position = Vector2( 56, 49 )
 scale = Vector2( 0.7, 0.68 )
 InteractText = "Everyone sits."
-ScavengerHuntText = "One by one, your problems evacuate your soul.
-Some need a bit more attention."
+ScavengerHuntText = "One by one, your problems evacuate your soul. Some need a bit more attention."
 
 [node name="Leela" parent="." instance=ExtResource( 3 )]
 position = Vector2( 189.2, 113 )

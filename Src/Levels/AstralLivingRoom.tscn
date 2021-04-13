@@ -50,6 +50,7 @@ that way."
 [node name="Table" parent="." instance=ExtResource( 5 )]
 position = Vector2( 39.6986, 120.943 )
 scale = Vector2( 3, 1.5 )
+InteractText = "The table and chairs came as a set."
 
 [node name="Stool2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 81, 114 )
@@ -74,8 +75,7 @@ position = Vector2( 141.376, 153.349 )
 scale = Vector2( 2, 0.4 )
 InteractText = "That cat is everywhere! 
 Better see what she wants."
-ScavengerHuntText = "Not sure if this counts as a chair,
-but clearly it's already taken."
+ScavengerHuntText = "Not sure if this counts as a chair, but clearly it's already taken."
 
 [node name="Leela" parent="." instance=ExtResource( 4 )]
 position = Vector2( 183, 111 )

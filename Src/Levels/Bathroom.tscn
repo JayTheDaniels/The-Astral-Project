@@ -41,8 +41,7 @@ player_spawn_location = Vector2( 160, 136 )
 [node name="Towels" parent="." instance=ExtResource( 5 )]
 position = Vector2( 160, 88 )
 InteractText = "The most important thing I own."
-ScavengerHuntText = "One for the floor, one for me.
-Sounds like the water is almost ready."
+ScavengerHuntText = "One for the floor, one for me. Sounds like the water is almost ready."
 
 [node name="Painting" parent="." instance=ExtResource( 5 )]
 position = Vector2( 39.104, 120.105 )
@@ -68,8 +67,7 @@ position = Vector2( 190, 100 )
 scale = Vector2( 2, 3 )
 InteractText = "Nothing quite like submersing the body
 in warm water. "
-ScavengerHuntText = "Maybe a quick bath will help clear my mind.
-I should grab a towel."
+ScavengerHuntText = "Maybe a quick bath will help clear my mind. I should grab a towel."
 startpoint = true
 
 [node name="ColorRect" type="ColorRect" parent="."]

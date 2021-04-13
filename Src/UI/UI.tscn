@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Src/Code/PortalButton.gd" type="Script" id=1]
 [ext_resource path="res://Src/Code/InvisibleButton.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Src/UI/PopupDialog.tscn" type="PackedScene" id=5]
 [ext_resource path="res://UI.tres" type="Theme" id=6]
 [ext_resource path="res://Assets/LeelaLives/MicrosoftTeams-image (1).png" type="Texture" id=7]
+[ext_resource path="res://Assets/LeelaLives/LeelaLife_empty.png" type="Texture" id=8]
 
 [node name="UI" type="Control"]
 pause_mode = 2
@@ -76,7 +77,7 @@ script = ExtResource( 3 )
 
 [node name="PopupDialog" parent="CanvasLayer" instance=ExtResource( 5 )]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="ProgressBar" type="HBoxContainer" parent="."]
 margin_left = 5.0
 margin_top = 5.0
 margin_right = 128.0
@@ -87,39 +88,75 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Leela" type="TextureRect" parent="HBoxContainer"]
+[node name="Leela" type="TextureRect" parent="ProgressBar"]
 visible = false
 margin_right = 128.0
 margin_bottom = 128.0
 texture = ExtResource( 7 )
 
-[node name="Leela2" type="TextureRect" parent="HBoxContainer"]
+[node name="Leela2" type="TextureRect" parent="ProgressBar"]
 visible = false
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 7 )
+
+[node name="Leela3" type="TextureRect" parent="ProgressBar"]
+visible = false
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 7 )
+
+[node name="Leela4" type="TextureRect" parent="ProgressBar"]
+visible = false
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 7 )
+
+[node name="Leela5" type="TextureRect" parent="ProgressBar"]
+visible = false
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 7 )
+
+[node name="EmptyProgressBar" type="HBoxContainer" parent="."]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 128.0
+margin_bottom = 128.0
+rect_scale = Vector2( 0.25, 0.25 )
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Leela" type="TextureRect" parent="EmptyProgressBar"]
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 8 )
+
+[node name="Leela2" type="TextureRect" parent="EmptyProgressBar"]
 margin_left = 133.0
 margin_right = 261.0
 margin_bottom = 128.0
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
-[node name="Leela3" type="TextureRect" parent="HBoxContainer"]
-visible = false
+[node name="Leela3" type="TextureRect" parent="EmptyProgressBar"]
 margin_left = 266.0
 margin_right = 394.0
 margin_bottom = 128.0
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
-[node name="Leela4" type="TextureRect" parent="HBoxContainer"]
-visible = false
+[node name="Leela4" type="TextureRect" parent="EmptyProgressBar"]
 margin_left = 399.0
 margin_right = 527.0
 margin_bottom = 128.0
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
-[node name="Leela5" type="TextureRect" parent="HBoxContainer"]
-visible = false
+[node name="Leela5" type="TextureRect" parent="EmptyProgressBar"]
 margin_left = 532.0
 margin_right = 660.0
 margin_bottom = 128.0
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/PortalButton" to="CanvasLayer/HBoxContainer/PortalButton" method="_on_Button_pressed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/InvisibleButton" to="CanvasLayer/HBoxContainer/InvisibleButton" method="_on_InvisibleButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/SpeedButton" to="CanvasLayer/HBoxContainer/SpeedButton" method="_on_SpeedButton_pressed"]

@@ -10,9 +10,24 @@
 "Normal",
 ]]
 
+[node name="OfficeBackground" type="TextureRect" parent="."]
+margin_left = -40.0
+margin_right = 1496.0
+margin_bottom = 1280.0
+rect_scale = Vector2( 0.16, 0.16 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UI" parent="." instance=ExtResource( 3 )]
+margin_left = 1.0
+margin_right = 1.0
+
 [node name="ColorRect" type="ColorRect" parent="."]
+margin_top = -16.0
 margin_right = 344.0
-margin_bottom = 208.0
+margin_bottom = 192.0
 color = Color( 0.188235, 0.172549, 0.180392, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -21,54 +36,39 @@ __meta__ = {
 [node name="OfficeCollision2" type="StaticBody2D" parent="." groups=[
 "Walls",
 ]]
+position = Vector2( 0, -16 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OfficeCollision2"]
 polygon = PoolVector2Array( 0, 0, 0, 64, 24, 80, 64, 80, 64, 96, 72, 104, 80, 96, 120, 96, 120, 80, 144, 80, 144, 160, 96, 160, 96, 184, 64, 184, 64.029, 160, 24, 160, 24, 80, 0, 64, 0, 200, 184, 200, 184, 0 )
 
-[node name="OfficeBackground" type="TextureRect" parent="."]
-margin_left = -40.0
-margin_top = 16.0
-margin_right = 1496.0
-margin_bottom = 1296.0
-rect_scale = Vector2( 0.16, 0.16 )
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 80, 144 )
-
-[node name="UI" parent="." instance=ExtResource( 3 )]
-margin_left = 1.0
-margin_right = 1.0
+position = Vector2( 80, 128 )
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
-position = Vector2( 80, 192 )
+position = Vector2( 80, 176 )
+scale = Vector2( 1, 0.440002 )
 next_scene_path = "res://Src/Levels/Hallway.tscn"
 player_spawn_location = Vector2( 104, 120 )
 
 [node name="Desk" parent="." instance=ExtResource( 5 )]
-position = Vector2( 93, 84 )
+position = Vector2( 93, 68 )
 scale = Vector2( 3, 1.5 )
 InteractText = "Always more work than
 there is time to do it in."
-ScavengerHuntText = "Dear Liam, I wrote you but you still aren't responding.
-We on for games tonight? Send."
+ScavengerHuntText = "Dear Liam, I wrote you but you still aren't responding. We on for games tonight? Send."
 
 [node name="Mirror" parent="." instance=ExtResource( 5 )]
-position = Vector2( 50, 73 )
+position = Vector2( 50, 57 )
 InteractText = "It's me! Great."
 ScavengerHuntText = "Self-reflection is bittersweet. Here we go..."
 
 [node name="HousePlant" parent="." instance=ExtResource( 5 )]
-position = Vector2( 25, 87 )
+position = Vector2( 25, 71 )
 InteractText = "Plant."
-ScavengerHuntText = "Looks healthy enough to me.
-Here's a bit of water to stay that way."
+ScavengerHuntText = "Looks healthy enough to me. Here's a bit of water to stay that way."
 
 [node name="TodoList" parent="." instance=ExtResource( 5 )]
-position = Vector2( 136, 74 )
+position = Vector2( 136, 58 )
 InteractText = "To Do:
 Water plant, email Liam."
 ScavengerHuntText = "To Do:
