@@ -31,13 +31,16 @@ func _physics_process(delta):
 
 func interaction():
 	print("Is interacting with " + self.name)
+	switchBox()
 	dialogue()
 
 
 func follow():
 	follow_player = true
 	
-
+func switchBox():
+	dialogue.get_node("YouBox").visible = false
+	dialogue.get_node("LeelaBox").visible = true
 
 func dialogue():
 	if interaction_room == 1:
@@ -80,10 +83,11 @@ func bedroom():
 		if Global.scavengerHuntStage == 5:
 			dialogue.dialogue = "You've impressed me, human. \n Return to your bed when you're ready to leave."
 			dialogue.open(self.get_path())
-			get_parent().get_node("UI/CanvasLayer/Lives").show()
+			#get_parent().get_node("UI/CanvasLayer/Lives").show()
 			# use this code for setting the return object
 			Global.completed_puzzles += 1
 			get_tree().get_root().get_node("/root/AstralBedroom/AstralBed").set_script(portal)
+			Global.scavengerHuntStage = 6
 		else:
 			dialogueTotal = 1
 			dialogue.dialogue = "Take your time human, there's no such thing here."
@@ -112,10 +116,11 @@ func bathroom():
 			dialogue.dialogue = "You continue to impress, human. When you're ready \n to leave, flush yourself out of this world."
 			dialogue.open(self.get_path())
 			$Meow.play()
-			get_parent().get_node("UI/CanvasLayer/Lives").show()
+			#get_parent().get_node("UI/CanvasLayer/Lives").show()
 			# use this code for setting the return object
 			Global.completed_puzzles += 1
 			get_tree().get_root().get_node("/root/AstralBathroom/Toilet").set_script(portal)
+			Global.scavengerHuntStage = 9
 		else:
 			dialogueTotal = 1
 			$Meow.play()
@@ -142,6 +147,7 @@ func office():
 			dialogue.dialogue = "You're getting better at this human. \n The mirror will take you home now."
 			Global.completed_puzzles += 1
 			get_tree().get_root().get_node("/root/AstralOffice/Mirror").set_script(portal)
+			Global.scavengerHuntStage = 7
 		else:
 			dialogueTotal = 1
 			if dialogueCounter == 1:
@@ -174,6 +180,7 @@ func living_room():
 			dialogue.dialogue = "Well done! If you're burning to return home \n the flames will take you there."
 			Global.completed_puzzles += 1
 			get_tree().get_root().get_node("/root/AstralLivingRoom/Fireplace").set_script(portal)
+			Global.scavengerHuntStage = 7
 		else:
 			dialogue.dialogue = "My favourite games are played at the dining table. \n It's as easy as 1,2,3..."
 			dialogue.open(self.get_path())
@@ -194,6 +201,7 @@ func kitchen():
 		dialogue.dialogue = "You don’t have to be so hard on yourself you know. \n You did well. Fire up those radiations and let’s head back!"
 		dialogue.open(self.get_path())
 		Global.completed_puzzles += 1
+		Global.scavengerHuntStage = 8
 		get_tree().get_root().get_node("/root/AstralKitchen/Microwave").set_script(portal)
 
 		

@@ -10,4 +10,14 @@ func _ready() -> void:
 	update_interface()
 	
 func update_interface() -> void:
-	lives.text = "Puzzles Complete: %s" % Global.completed_puzzles
+	#lives.text = "x %s" % Global.completed_puzzles
+	if Global.completed_puzzles == 1:
+		$HBoxContainer/Leela.visible = true
+	if Global.completed_puzzles == 2:
+		$HBoxContainer/Leela2.visible = true
+	if Global.completed_puzzles == 3:
+		$HBoxContainer/Leela3.visible = true
+	if Global.completed_puzzles == 4:
+		$HBoxContainer/Leela4.visible = true
+	if Global.completed_puzzles == 5:
+		$HBoxContainer/Leela5.visible = true

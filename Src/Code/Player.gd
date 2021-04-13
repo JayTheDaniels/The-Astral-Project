@@ -16,6 +16,7 @@ var curr_target = null
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
+onready var dialogue = get_parent().get_node("UI/CanvasLayer/PopupDialog")
 
 func _ready():
 	pass
@@ -44,6 +45,8 @@ func move_state(delta):
 	
 	if Input.is_action_just_pressed("interact"):
 		if can_interact == true:
+			dialogue.get_node("YouBox").visible = true
+			dialogue.get_node("LeelaBox").visible = false
 			curr_target.interaction()
 	
 func move():

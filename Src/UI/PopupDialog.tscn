@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Src/Code/PopupDialog.gd" type="Script" id=1]
 [ext_resource path="res://UI.tres" type="Theme" id=2]
+[ext_resource path="res://Assets/4px buttons_dialoguebox/dialoguebox_player1_4px.png" type="Texture" id=4]
+[ext_resource path="res://Assets/4px buttons_dialoguebox/dialoguebox_leela_4px.png" type="Texture" id=5]
 
 [node name="PopupDialog" type="PopupDialog"]
 pause_mode = 2
@@ -20,10 +22,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 1, 0, 0.772549, 0.254902 )
+[node name="YouBox" type="Sprite" parent="."]
+position = Vector2( 169.876, 11.1873 )
+scale = Vector2( 0.600442, 0.300221 )
+texture = ExtResource( 4 )
+
+[node name="LeelaBox" type="Sprite" parent="."]
+position = Vector2( 169.876, 11.1873 )
+scale = Vector2( 0.600442, 0.300221 )
+texture = ExtResource( 5 )
+
+[node name="Dialogue2" type="Label" parent="."]
+margin_left = 197.993
+margin_top = -30.0
+margin_right = 339.993
+margin_bottom = -17.0
+text = "Press Enter to Continue"
+autowrap = true
+max_lines_visible = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -32,25 +48,19 @@ __meta__ = {
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 5.0
-margin_top = -38.0
-margin_right = -5.0
-margin_bottom = -1.0
+margin_left = 95.0
+margin_top = -47.0
+margin_right = -15.0
+margin_bottom = -10.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Dialogue" type="Label" parent="VBoxContainer"]
-margin_right = 330.0
+margin_right = 230.0
 margin_bottom = 13.0
 text = "Temp dialogue text!"
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Prompt" type="Label" parent="."]
-margin_left = 190.867
-margin_top = -14.2705
-margin_right = 338.867
-margin_bottom = -1.27046
-text = "Press Enter to Continue..."

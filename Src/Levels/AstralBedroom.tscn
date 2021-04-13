@@ -84,4 +84,3 @@ ScavengerHuntText = "Your mind turns off, your body reacts to the images.
 Leela beckons for you."
 
 [node name="MusicAstralBackgroundLoop" parent="." instance=ExtResource( 6 )]
-pause_mode = 2
