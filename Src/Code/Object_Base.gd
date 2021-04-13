@@ -51,7 +51,12 @@ func get_start():
 			Global.scavengerHuntStage = 1
 		if Global.scavengerHuntLevel == 2:
 			scavengerHunt()
-		
+	if self.name == "Stool":
+		if Global.scavengerHuntLevel != 4:
+			Global.scavengerHuntLevel = 4
+			Global.scavengerHuntStage = 1
+		if Global.scavengerHuntLevel == 4:
+			scavengerHunt()
 
 func scavengerHunt():
 	if Global.scavengerHuntLevel == 1:
@@ -130,6 +135,14 @@ func office_object():
 			Global.scavengerHuntStage = 6
 
 func living_room_object():
+	if Global.scavengerHuntStage == 1:
+		if self.name == "Stool":
+			print("Objective Updated!")
+			Global.scavengerHuntStage = 2
+	if Global.scavengerHuntStage == 1:
+		if self.name == "Stool":
+			print("Objective Updated!")
+			Global.scavengerHuntStage = 2
 	if Global.scavengerHuntStage == 1:
 		if self.name == "Stool":
 			print("Objective Updated!")

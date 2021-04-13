@@ -85,6 +85,7 @@ but clearly it's already taken."
 
 [node name="Leela" parent="." instance=ExtResource( 4 )]
 position = Vector2( 183, 111 )
+interaction_room = 4
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = 232.0

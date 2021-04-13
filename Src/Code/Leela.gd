@@ -32,7 +32,7 @@ func _physics_process(delta):
 func interaction():
 	print("Is interacting with " + self.name)
 	dialogue()
-	$Meow.play()
+
 
 func follow():
 	follow_player = true
@@ -60,6 +60,7 @@ func bedroom():
 	if dialogueCounter == 0:
 		dialogue.dialogue = "A visitor..? From the mortal plane no less!"
 		dialogue.open(self.get_path())
+		$Meow.play()
 	if dialogueCounter == 1:
 		dialogue.dialogue = "Not common to see humans around here. Are you lost?"
 		dialogue.open(self.get_path())
@@ -94,6 +95,7 @@ func bathroom():
 	if dialogueCounter == 0:
 		dialogue.dialogue = "Scrubba dub dub. Astral Cat in your tub. \n Welcome back human, thanks for the warm bath."
 		dialogue.open(self.get_path())
+		$Meow.play()
 	if dialogueCounter == 1:
 		dialogue.dialogue = "For this puzzle, let's cleanse you of your \n negative thoughts. Good thing we're in a bathroom."
 		dialogue.open(self.get_path())
@@ -109,12 +111,14 @@ func bathroom():
 		if Global.scavengerHuntStage == 8:
 			dialogue.dialogue = "You continue to impress, human. When you're ready \n to leave, flush yourself out of this world."
 			dialogue.open(self.get_path())
+			$Meow.play()
 			get_parent().get_node("UI/CanvasLayer/Lives").show()
 			# use this code for setting the return object
 			Global.completed_puzzles += 1
 			get_tree().get_root().get_node("/root/AstralBathroom/Toilet").set_script(portal)
 		else:
 			dialogueTotal = 1
+			$Meow.play()
 			dialogue.dialogue = "Take your time human, there's no such thing here."
 			dialogue.open(self.get_path())
 
@@ -124,6 +128,7 @@ func office():
 	if dialogueCounter == 0:
 		dialogue.dialogue = "Friend! Hello again... I have a new gift for you. \n A new puzzle to go with it."
 		dialogue.open(self.get_path())
+		$Meow.play()
 		Global.scavengerHuntStage = 5
 	if dialogueCounter == 1:
 		dialogue.dialogue = "Communicate with family, \n research, shop, and play games."
@@ -150,19 +155,22 @@ func office():
 
 func living_room():
 	var interaction_Counter = 0
+	dialogueTotal = 2
 	if dialogueCounter == 0:
 		dialogue.dialogue = "Welcome back to the Astral World! Not so lonely here."
 		dialogue.open(self.get_path())
-		interaction_Counter = 1
+		Global.scavengerHuntStage = 3
+		$Meow.play()
 	if dialogueCounter == 1:
 		dialogue.dialogue = "Let's warm those empty seats with a game \n of musical chairs."
 		dialogue.open(self.get_path())
 	if dialogueCounter == 2:
 		dialogue.dialogue = "Take it from the top and dance around the clock."
 		dialogue.open(self.get_path())
-		Global.scavengerHuntStage = 3
+		interaction_Counter = 1
 	if interaction_Counter == 1:
 		if Global.scavengerHuntStage == 6:
+			$Meow.play()
 			dialogue.dialogue = "Well done! If you're burning to return home \n the flames will take you there."
 			Global.completed_puzzles += 1
 			get_tree().get_root().get_node("/root/AstralLivingRoom/Fireplace").set_script(portal)
@@ -174,6 +182,7 @@ func kitchen():
 	var interaction_Counter = 0
 	dialogueTotal = 1
 	if dialogueCounter == 0:
+		$Meow.play()
 		dialogue.dialogue = "You made it! Some sassy comebacks from the kitchen. \n Although, it is YOUR kitchen…"
 		dialogue.open(self.get_path())
 		Global.scavengerHuntStage = 3
