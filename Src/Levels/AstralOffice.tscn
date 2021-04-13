@@ -52,8 +52,7 @@ position = Vector2( 99, 84 )
 scale = Vector2( 2, 1.5 )
 InteractText = "Always more work than
 there is time to do it in."
-ScavengerHuntText = "(placeholder) Congrats, you did it!
-Return to Leela."
+ScavengerHuntText = "I guess this place still gets wifi."
 
 [node name="Mirror" parent="." instance=ExtResource( 5 )]
 position = Vector2( 58, 74 )
