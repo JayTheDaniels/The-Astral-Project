@@ -27,7 +27,7 @@ __meta__ = {
 polygon = PoolVector2Array( 8, 0, 8, 72, 8, 168, 272, 168, 272, 143.642, 288, 144, 288, 128.57, 288, 104, 272, 104, 272, 40, 232, 40, 232, 64, 224, 64, 184, 64, 176, 64, 176, 48, 112, 48, 112, 72, 8, 72, 8, -136, 440, -136, 440, 224, -32, 224, -32, -136, 8, -136 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 256, 88 )
+position = Vector2( 256, 120 )
 
 [node name="UI" parent="." instance=ExtResource( 3 )]
 margin_left = 1.0
@@ -41,7 +41,7 @@ player_spawn_location = Vector2( 40, 128 )
 [node name="Door2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 304, 128 )
 next_scene_path = "res://Src/Levels/Hallway.tscn"
-player_spawn_location = Vector2( 48, 120 )
+player_spawn_location = Vector2( 56, 128 )
 
 [node name="Fireplace" parent="." instance=ExtResource( 5 )]
 position = Vector2( 204.89, 66.747 )
@@ -64,11 +64,11 @@ scale = Vector2( 2.72, 1.72 )
 InteractText = "Is it time for breakfast yet?"
 
 [node name="Stool" parent="." instance=ExtResource( 5 )]
-position = Vector2( 183.295, 116.7 )
-scale = Vector2( 0.740745, 0.666667 )
+position = Vector2( 183.295, 113.7 )
+scale = Vector2( 0.741, 0.3 )
 InteractText = "A seat next to an open fire."
 
 [node name="Flowers" parent="." instance=ExtResource( 5 )]
 position = Vector2( 141.376, 155.349 )
-scale = Vector2( 1, 0.399999 )
+scale = Vector2( 2, 0.4 )
 InteractText = "Smells nice."

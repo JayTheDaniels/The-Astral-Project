@@ -139,7 +139,7 @@ func kitchen_object():
 			Global.scavengerHuntStage = 2
 	if Global.scavengerHuntStage == 3:
 		if self.name == "Sink":
-			print ("Ojbective Updated!")
+			print ("Objective Updated!")
 			Global.scavengerHuntStage = 4
 	if Global.scavengerHuntStage == 4:
 		if self.name == "Stove":

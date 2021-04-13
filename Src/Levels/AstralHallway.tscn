@@ -20,9 +20,9 @@ __meta__ = {
 
 [node name="AstralHallwayBackground" type="TextureRect" parent="."]
 margin_left = -32.0
-margin_top = 16.0
+margin_top = 32.0
 margin_right = 2528.0
-margin_bottom = 1168.0
+margin_bottom = 1184.0
 rect_scale = Vector2( 0.16, 0.16 )
 texture = ExtResource( 2 )
 __meta__ = {
@@ -41,10 +41,11 @@ margin_right = 1.0
 ]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HallwayCollision"]
-polygon = PoolVector2Array( 88, 72, 8, 72, 8, 160, 336, 160, 336, 72, 264, 72, 232, 72, 120, 72, 88, 72, 88, 72, 8, -40, 376, -40, 376, 232, -16, 224, -16, -40, 8, -40 )
+position = Vector2( 0, 16 )
+polygon = PoolVector2Array( 88, 80, 8, 80, 8, 160, 336, 160, 336, 80, 264, 80, 232, 80, 120, 80, 88, 80, 88, 80, 8, -40, 376, -40, 376, 232, -16, 224, -16, -40, 8, -40 )
 
 [node name="Painting" parent="." instance=ExtResource( 5 )]
-position = Vector2( 184, 72 )
+position = Vector2( 184, 87 )
 InteractText = "Mom's always watching."
 
 [node name="MusicAstralBackgroundLoop" parent="." instance=ExtResource( 3 )]

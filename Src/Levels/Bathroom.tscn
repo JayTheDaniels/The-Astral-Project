@@ -20,7 +20,7 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 56, 144 )
+position = Vector2( 38, 144 )
 
 [node name="UI" parent="." instance=ExtResource( 4 )]
 margin_left = 1.0
@@ -31,10 +31,10 @@ margin_right = 1.0
 ]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BathroomCollision"]
-polygon = PoolVector2Array( 24, 48, 48, 48, 72, 48, 128, 48, 128, 88, 160, 88, 208, 88, 208, 112, 208, 168, 8, 168, 8, 136, 72, 136, 72, 104, 8, 104, 8, 48, -32, 48, -32, 208, 240, 208, 240, -16, -32, -16, -32, 48 )
+polygon = PoolVector2Array( 24, 48, 48, 48, 72, 48, 128, 48, 128, 88, 160, 88, 208, 88, 208, 112, 208, 168, 8, 168, 8, 128, 64, 128, 64, 96, 8, 96, 8, 48, -32, 48, -32, 208, 240, 208, 240, -16, -32, -16, -32, 48 )
 
 [node name="Door" parent="." instance=ExtResource( 3 )]
-position = Vector2( 0, 144 )
+position = Vector2( -7, 144 )
 next_scene_path = "res://Src/Levels/Bedroom.tscn"
 player_spawn_location = Vector2( 160, 136 )
 
@@ -45,26 +45,27 @@ ScavengerHuntText = "One for the floor, one for me.
 Sounds like the water is almost ready."
 
 [node name="Painting" parent="." instance=ExtResource( 5 )]
-position = Vector2( 39.104, 116.105 )
+position = Vector2( 39.104, 120.105 )
 InteractText = "Keeps things classy."
 
 [node name="Toilet Paper" parent="." instance=ExtResource( 5 )]
-position = Vector2( 32, 48 )
+position = Vector2( 34, 46 )
 scale = Vector2( 0.64, 1 )
 InteractText = "Toilet paper... I remember when this was worth a lot."
 
 [node name="Toilet" parent="." instance=ExtResource( 5 )]
-position = Vector2( 56, 48 )
-scale = Vector2( 0.64, 0.68 )
+position = Vector2( 56, 49 )
+scale = Vector2( 0.7, 0.68 )
 InteractText = "Ah, toilet humour."
 
 [node name="Mirror" parent="." instance=ExtResource( 5 )]
-position = Vector2( 115, 48 )
-scale = Vector2( 0.64, 0.68 )
+position = Vector2( 112, 52 )
+scale = Vector2( 3, 1.5 )
 InteractText = "Don't forget to wash your hands!"
 
 [node name="Bathtub" parent="." instance=ExtResource( 5 )]
-position = Vector2( 184, 116.105 )
+position = Vector2( 190, 100 )
+scale = Vector2( 2, 3 )
 InteractText = "Nothing quite like submersing the body
 in warm water. "
 ScavengerHuntText = "Maybe a quick bath will help clear my mind.

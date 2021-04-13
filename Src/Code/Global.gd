@@ -85,7 +85,7 @@ func bathroom():
 		sink.InteractText = sink.ScavengerHuntText
 
 func office():
-	var todo = get_tree().get_root().get_node("/root/Office/TodoList")
+
 	if scavengerHuntStage == 1:
 		var plant = get_tree().get_root().get_node("/root/Office/HousePlant")
 		plant.InteractText = plant.ScavengerHuntText
@@ -93,6 +93,7 @@ func office():
 		var desk = get_tree().get_root().get_node("/root/Office/Desk")
 		desk.InteractText = desk.ScavengerHuntText
 	if scavengerHuntStage == 3:
+		var todo = get_tree().get_root().get_node("/root/Office/TodoList")
 		todo.InteractText = todo.ScavengerHuntText
 	if scavengerHuntStage == 4:
 		get_tree().get_root().get_node("/root/Office/Mirror").set_script(portal)

@@ -11,14 +11,6 @@
 "Astral",
 ]]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 352.0
-margin_bottom = 208.0
-color = Color( 0.188235, 0.172549, 0.180392, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="AstralOfficeBackground" type="TextureRect" parent="."]
 margin_left = -40.0
 margin_top = 16.0
@@ -30,15 +22,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 352.0
+margin_bottom = 208.0
+color = Color( 0.188235, 0.172549, 0.180392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="OfficeCollision" type="StaticBody2D" parent="." groups=[
 "Walls",
 ]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OfficeCollision"]
-polygon = PoolVector2Array( 24, 16, 24, 64, 24, 64, 24, 88, 24, 98.4943, 24, 160, 64, 160, 64, 184, 104, 184, 104, 160, 144, 160, 144, 64, 120, 64, 120, 80, 80, 80, 80, 88, 64, 88, 64, 64, 24, 64, 24, 16, 208, 16, 208, 216, -32, 216, -32, 16 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OfficeCollision"]
-polygon = PoolVector2Array( 0, 0, 0, 56, 88, 64, 88, 72, 96, 72, 96, 80, 112, 80, 112, 72, 120, 72, 120, 64, 144, 64, 144, 160, 96, 160, 96, 184, 64, 184, 64.029, 160, 24, 160, 24, 64, 0, 56, 0, 200, 184, 200, 184, 0 )
+polygon = PoolVector2Array( 0, 0, 0, 56, 24, 96, 40, 96, 40, 80, 64, 80, 64, 96, 72, 104, 80, 96, 120, 96, 120, 80, 120, 80, 144, 80, 144, 160, 96, 160, 96, 184, 64, 184, 64.029, 160, 24, 160, 24, 96, 0, 56, 0, 200, 184, 200, 184, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 80, 128 )
@@ -48,14 +45,15 @@ margin_left = 1.0
 margin_right = 1.0
 
 [node name="Desk" parent="." instance=ExtResource( 5 )]
-position = Vector2( 94, 80 )
+position = Vector2( 99, 84 )
+scale = Vector2( 2, 1.5 )
 InteractText = "Always more work than
 there is time to do it in."
 ScavengerHuntText = "(placeholder) Congrats, you did it!
 Return to Leela."
 
 [node name="Mirror" parent="." instance=ExtResource( 5 )]
-position = Vector2( 48, 64 )
+position = Vector2( 53, 73 )
 InteractText = "It's me! Oh no..."
 
 [node name="Leela" parent="." instance=ExtResource( 4 )]
@@ -63,3 +61,7 @@ position = Vector2( 32, 80 )
 interaction_room = 3
 
 [node name="MusicAstralBackgroundLoop" parent="." instance=ExtResource( 6 )]
+
+[node name="TodoList" parent="." instance=ExtResource( 5 )]
+position = Vector2( 136, 72 )
+InteractText = "Always more to do."

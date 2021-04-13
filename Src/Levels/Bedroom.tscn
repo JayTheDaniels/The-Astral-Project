@@ -23,48 +23,51 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 160, 136 )
+position = Vector2( 48, 160 )
 
 [node name="UI" parent="." instance=ExtResource( 3 )]
-margin_left = 1.0
-margin_right = 1.0
+margin_top = -8.0
+margin_bottom = -8.0
 
 [node name="Door2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 208, 136 )
 next_scene_path = "res://Src/Levels/Bathroom.tscn"
-player_spawn_location = Vector2( 56, 144 )
+player_spawn_location = Vector2( 38, 144 )
 
 [node name="BedroomWallCollision" type="StaticBody2D" parent="." groups=[
 "Walls",
 ]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BedroomWallCollision"]
-polygon = PoolVector2Array( 8, 184, 32, 184, 32, 200, 64, 200, 64, 184, 136, 184, 152, 184, 176, 184, 176, 160, 200, 160, 200, 104, 176, 104, 176, 40, 104, 40, 72, 40, 40, 48, 24, 48, 8, 40, 0, -16, 216, -16, 216, 208, -32, 208, -32, -16, 0, -16, 0, -16, 8, 48 )
+polygon = PoolVector2Array( 8, 176, 32, 176, 32, 200, 64, 200, 64, 176, 136, 176, 152, 176, 176, 176, 176, 160, 200, 160, 200, 104, 176, 104, 176, 56, 160, 56, 152, 40, 40, 40, 24, 40, 8, 40, 0, -16, 216, -16, 216, 208, -32, 208, -32, -16, 0, -16, 0, -16, 8, 48 )
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 48, 208 )
 next_scene_path = "res://Src/Levels/Hallway.tscn"
-player_spawn_location = Vector2( 248, 96 )
+player_spawn_location = Vector2( 248, 120 )
 
 [node name="Bed" parent="." instance=ExtResource( 5 )]
-position = Vector2( 32, 72 )
+position = Vector2( 32, 64 )
+scale = Vector2( 1.6, 3 )
 InteractText = "Home of dreamless sleep and sleepless dreams alike."
 ScavengerHuntText = "What's happening?"
 
 [node name="Couch" parent="." instance=ExtResource( 5 )]
 position = Vector2( 112, 168 )
-scale = Vector2( 0.720001, 1 )
+scale = Vector2( 1.5, 1.75 )
 InteractText = "Feels like most of my time is spent sitting here."
 
 [node name="Television" parent="." instance=ExtResource( 5 )]
-position = Vector2( 112, 104 )
-scale = Vector2( 0.960005, 1.16 )
+position = Vector2( 112, 99 )
+scale = Vector2( 2.7, 1.2 )
 script = ExtResource( 6 )
 
 [node name="Dresser" parent="." instance=ExtResource( 5 )]
-position = Vector2( 96, 56 )
+position = Vector2( 88, 48 )
+scale = Vector2( 1.8, 1 )
 InteractText = "I only own purple hoodies."
 
 [node name="Books" parent="." instance=ExtResource( 5 )]
-position = Vector2( 128, 40 )
+position = Vector2( 136, 32 )
+scale = Vector2( 1.3, 1.3 )
 InteractText = "I'll get to reading these eventually..."

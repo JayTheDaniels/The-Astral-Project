@@ -28,7 +28,7 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 64, 128 )
+position = Vector2( 56, 128 )
 
 [node name="UI" parent="." instance=ExtResource( 4 )]
 margin_left = 1.0
@@ -39,22 +39,22 @@ margin_right = 1.0
 ]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HallwayCollision"]
-polygon = PoolVector2Array( 88, 88, 8, 88, 8, 160, 336, 160, 336, 88, 264, 88, 264, 56, 232, 56, 232, 88, 120, 88, 120, 56, 88, 56, 88, 88, 8, -40, 376, -40, 376, 232, -16, 224, -16, -40, 8, -40 )
+polygon = PoolVector2Array( 88, 96, 8, 96, 8, 152, 336, 152, 336, 96, 256, 96, 256, 56, 232, 56, 232, 96, 112, 96, 112, 56, 88, 56, 88, 96, 8, -40, 376, -40, 376, 232, -16, 224, -16, -40, 8, -40 )
 
 [node name="Door" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, 112 )
 next_scene_path = "res://Src/Levels/LivingRoom.tscn"
-player_spawn_location = Vector2( 240, 128 )
+player_spawn_location = Vector2( 256, 120 )
 
 [node name="Door2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 104, 56 )
+position = Vector2( 104, 65 )
 next_scene_path = "res://Src/Levels/Office.tscn"
-player_spawn_location = Vector2( 80, 128 )
+player_spawn_location = Vector2( 80, 144 )
 
 [node name="Door3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 248, 56 )
+position = Vector2( 248, 65 )
 next_scene_path = "res://Src/Levels/Bedroom.tscn"
-player_spawn_location = Vector2( 48, 144 )
+player_spawn_location = Vector2( 48, 160 )
 
 [node name="Painting" parent="." instance=ExtResource( 5 )]
 position = Vector2( 184, 80 )

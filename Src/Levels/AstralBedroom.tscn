@@ -13,9 +13,9 @@
 
 [node name="Astral Bedroom Background" type="TextureRect" parent="."]
 margin_left = -32.0
-margin_top = -16.0
+margin_top = -24.0
 margin_right = 1768.0
-margin_bottom = 1384.0
+margin_bottom = 1376.0
 rect_scale = Vector2( 0.16, 0.16 )
 texture = ExtResource( 4 )
 expand = true
@@ -36,12 +36,12 @@ __meta__ = {
 
 [node name="Leela" parent="." instance=ExtResource( 3 )]
 pause_mode = 2
-position = Vector2( 99.3527, 55.5758 )
+position = Vector2( 102.353, 50.5758 )
 collision_mask = 3
 interaction_room = 1
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 160.094, 54.9846 )
+position = Vector2( 48, 112 )
 
 [node name="UI" parent="." instance=ExtResource( 2 )]
 pause_mode = 2
@@ -51,29 +51,33 @@ pause_mode = 2
 ]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AstralLevelBedroomBoundary"]
-polygon = PoolVector2Array( 8, 48, 8, 168, 133.764, 168, 152, 168, 176, 168, 176, 120, 176, 96, 176, 48, 176, 24, 176, -16, 216, -16, 216, 216, -40, 216, -40, -16, 176, -16, 176, 48, 40, 48, 24, 48 )
+polygon = PoolVector2Array( 8, 40, 8, 176, 98.0728, 176, 136, 176, 152, 176, 176, 176, 176, 120, 176, 96, 176, 56, 160, 56, 176, 48, 176, 24, 176, -16, 216, -16, 216, 216, -40, 216, -40, -16, 176, -16, 176, 48, 160, 56, 152, 40, 104, 40, 104, 56, 72, 56, 72, 40 )
 
 [node name="AstralBookshelf" parent="." instance=ExtResource( 5 )]
-position = Vector2( 122.051, 39.1041 )
+position = Vector2( 136, 32 )
+scale = Vector2( 1.3, 1.3 )
 InteractText = "Are my books okay?"
 ScavengerHuntText = "Poor lost, wandering soul. Sometimes sitting
  still is the only way to move forward."
 
 [node name="AstralBed" parent="." instance=ExtResource( 5 )]
-position = Vector2( 31.8877, 59.3206 )
+position = Vector2( 32, 64 )
+scale = Vector2( 1.6, 3 )
 InteractText = "How do you get astral residue out
 of fabric?"
 ScavengerHuntText = "Your body still and your mind wanders.
 You crave sensation."
 
 [node name="AstralCouch" parent="." instance=ExtResource( 5 )]
-position = Vector2( 94.6994, 127.132 )
+position = Vector2( 112, 168 )
+scale = Vector2( 1.5, 1.75 )
 InteractText = "My furniture is going to need to be cleaned after this..."
 ScavengerHuntText = "Stillness is good, but sometimes we need rest.
 Do this and I'll show you what dreams this realm offers."
 
 [node name="AstralTV" parent="." instance=ExtResource( 5 )]
-position = Vector2( 122.051, 108.862 )
+position = Vector2( 112, 99 )
+scale = Vector2( 2.7, 1.2 )
 InteractText = "Seems this place only gets one channel...
 Static."
 ScavengerHuntText = "Your mind turns off, your body reacts to the images.
