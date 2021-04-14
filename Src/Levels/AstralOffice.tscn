@@ -52,7 +52,7 @@ position = Vector2( 99, 84 )
 scale = Vector2( 2, 1.5 )
 InteractText = "Always more work than
 there is time to do it in."
-ScavengerHuntText = "I guess this place still gets wifi."
+ScavengerHuntText = "I need to stop procrastinating on the important things that I have to do. Like reaching out to my family and friends, especially during these times. Leela nods at your revalation."
 
 [node name="Mirror" parent="." instance=ExtResource( 5 )]
 position = Vector2( 58, 74 )
@@ -66,6 +66,6 @@ interaction_room = 3
 
 [node name="TodoList" parent="." instance=ExtResource( 5 )]
 position = Vector2( 136, 72 )
-InteractText = "Always more to do."
+InteractText = "There’s always more to do. And I guess that’s okay. That’s how I grow as a person"
 
 [node name="AstralTransition" parent="." instance=ExtResource( 7 )]

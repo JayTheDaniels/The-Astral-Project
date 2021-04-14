@@ -144,7 +144,7 @@ func office():
 		interaction_Counter = 1
 	if interaction_Counter == 1:
 		if Global.scavengerHuntStage == 6:
-			dialogue.dialogue = "You're getting better at this human. The mirror will take you home now."
+			dialogue.dialogue = "You're getting better at this human. Reflect on your life once more to get back home."
 			Global.completed_puzzles = Global.completed_puzzles + 1
 			get_tree().get_root().get_node("/root/AstralOffice/Mirror").set_script(portal)
 			Global.scavengerHuntStage = 7
