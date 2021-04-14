@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI.tres" type="Theme" id=1]
+[ext_resource path="res://Src/Code/StartButton.gd" type="Script" id=2]
+[ext_resource path="res://Assets/IMG_0888.PNG" type="Texture" id=3]
+[ext_resource path="res://Src/UI/Credits.tscn" type="PackedScene" id=4]
+
+[node name="Intro" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 341.0
+margin_bottom = 200.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 32.0
+margin_right = 208.0
+margin_bottom = 205.0
+theme = ExtResource( 1 )
+text = "It’s been a while since you left the house. This quarantine situation is becoming unbearable. A little exploration around the house will probably uncover some deeply buried cosmic secrets. Embark on a self-actualizing adventure at home but not at home..."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 8.0
+margin_top = 176.0
+margin_right = 94.0
+margin_bottom = 195.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="Button" parent="HBoxContainer"]
+margin_right = 41.0
+margin_bottom = 19.0
+theme = ExtResource( 1 )
+text = "Start"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+next_scene_path = "res://Src/Levels/Bedroom.tscn"
+
+[node name="Credits" parent="HBoxContainer" instance=ExtResource( 4 )]
+[connection signal="pressed" from="HBoxContainer/Start" to="HBoxContainer/Start" method="_on_Button_pressed"]

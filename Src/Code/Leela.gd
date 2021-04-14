@@ -71,7 +71,7 @@ func bedroom():
 		dialogue.dialogue = "Don't worry human. I can show you how to navigate The Astral Plane."
 		dialogue.open(self.get_path())
 	if dialogueCounter == 3:
-		dialogue.dialogue = "Let's make a game of it! Beside me is your mirror. Your first clue waits for you there."
+		dialogue.dialogue = "Let's make a game of it! Look inside your vase. Your first clue waits for you there."
 		dialogue.open(self.get_path())
 		Global.scavengerHunt = true
 		Global.scavengerHuntLevel = 1

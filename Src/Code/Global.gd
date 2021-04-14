@@ -10,14 +10,16 @@ var scavengerHuntLevel = 0 setget set_scavengerHuntLevel
 var scavengerHuntStage = 0 setget set_scavengerHuntStage
 var completed_puzzles = 0 setget set_puzzles
 const portal = preload("res://Src/Code/Portal.gd")
+var outro = "res://Src/Levels/Outro.tscn"
 
-var scavengerHunt = true
+var scavengerHunt = false
 
 func set_puzzles(value: int) -> void:
 	completed_puzzles = value
 	print ("Puzzles Completed: ", completed_puzzles)
 	emit_signal("puzzle_progress")
-
+	if completed_puzzles >= 5:
+		scavengerHuntLevel = 6
 
 
 func set_scavengerHuntLevel(value: int) -> void:
@@ -47,8 +49,8 @@ func set_scavengerHuntStage(value: int) -> void:
 
 func bedroom():
 	if scavengerHuntStage == 1:
-		var bookshelf = get_tree().get_root().get_node("/root/AstralBedroom/AstralBookshelf")
-		bookshelf.InteractText = bookshelf.ScavengerHuntText
+		var mirror = get_tree().get_root().get_node("/root/AstralBedroom/AstralMirror")
+		mirror.InteractText = mirror.ScavengerHuntText
 	if scavengerHuntStage == 2:
 		var couch = get_tree().get_root().get_node("/root/AstralBedroom/AstralCouch")
 		couch.InteractText = couch.ScavengerHuntText
@@ -146,4 +148,6 @@ func kitchen():
 
 
 func hallway():
-	pass
+	get_tree().get_root().get_node("/root/Hallway/Painting").set_script(portal)
+	if scavengerHuntStage == 2:
+		get_tree().change_scene_to(outro)

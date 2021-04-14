@@ -74,7 +74,7 @@ func scavengerHunt():
 
 func bedroom_object():
 	if Global.scavengerHuntStage == 1:
-		if self.name == "AstralBookshelf":
+		if self.name == "AstralMirror":
 			print ("Objective Updated!")
 			Global.scavengerHuntStage = 2
 	if Global.scavengerHuntStage == 2:
@@ -178,4 +178,5 @@ func kitchen_object():
 
 
 func hallway_object():
-	pass
+	if self.name == "AstralPainting":
+		Global.scavengerHuntStage = 2

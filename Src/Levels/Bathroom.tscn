@@ -65,8 +65,7 @@ InteractText = "Don't forget to wash your hands!"
 [node name="Bathtub" parent="." instance=ExtResource( 5 )]
 position = Vector2( 190, 100 )
 scale = Vector2( 2, 3 )
-InteractText = "Nothing quite like submersing the body
-in warm water. "
+InteractText = "Nothing quite like submersing the body in warm water. "
 ScavengerHuntText = "Maybe a quick bath will help clear my mind. I should grab a towel."
 startpoint = true
 

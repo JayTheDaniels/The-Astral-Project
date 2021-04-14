@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Src/Code/Credits.gd" type="Script" id=1]
+[ext_resource path="res://UI.tres" type="Theme" id=2]
+
+[node name="Credits" type="Button"]
+margin_left = 45.0
+margin_right = 99.0
+margin_bottom = 19.0
+theme = ExtResource( 2 )
+text = "Credits"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+credits = "Created by:
+Jay Cooper
+Kristjan Buckingham
+Lynn Alkhouri
+Nneka Nnagbo
+Prepared for Emma Westecott, Digital Games DIGF-6018, OCAD University
+April 2021"
+[connection signal="pressed" from="." to="." method="_on_Credits_pressed"]
