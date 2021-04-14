@@ -81,7 +81,7 @@ func bedroom():
 		interaction_Counter = 1
 	if interaction_Counter == 1:
 		if Global.scavengerHuntStage == 5:
-			dialogue.dialogue = "You've impressed me, human. Return to your bed when you're ready to leave."
+			dialogue.dialogue = "You've impressed me, human. There are more secrets to be found in your other rooms. Return to your bed when you're ready to leave."
 			dialogue.open(self.get_path())
 			#get_parent().get_node("UI/CanvasLayer/Lives").show()
 			# use this code for setting the return object

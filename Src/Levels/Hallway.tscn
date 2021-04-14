@@ -59,3 +59,4 @@ player_spawn_location = Vector2( 48, 160 )
 [node name="Painting" parent="." instance=ExtResource( 5 )]
 position = Vector2( 184, 80 )
 InteractText = "Mom's always watching."
+startpoint = true

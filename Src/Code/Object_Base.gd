@@ -31,6 +31,10 @@ func interaction():
 	#get_parent().get_node("UI/CanvasLayer/Lives").show()
 
 func get_start():
+	if self.name == "Painting":
+		if Global.completed_puzzles >= 5:
+			Global.scavengerHuntLevel = 6
+			Global.scavengerHuntStage = 1
 	if self.name == "TodoList":
 		if Global.scavengerHuntLevel != 3:
 			Global.scavengerHuntLevel = 3
