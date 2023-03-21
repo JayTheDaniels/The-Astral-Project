@@ -6,4 +6,4 @@ Game design and development by Jay Cooper ([@JayTheDaniels](https://github.com/J
 
 Hosted on itch.io. View the game's source on GitHub.
 
-Play [The Astral Project](https://jaythedaniels.itch.io/the-astral-project)
+Play [The Astral Project](https://jayrcoops.itch.io/the-astral-project)
