@@ -10,4 +10,4 @@ Hosted on itch.io. View the game's source on GitHub.
 
 Play [The Astral Project](https://jayrcoops.itch.io/the-astral-project)
 
-Watch the ![game playthrough](https://www.youtube.com/watch?v=cLXh9Qo8XHA)
+Watch the [game playthrough](https://www.youtube.com/watch?v=cLXh9Qo8XHA)
